@@ -1,0 +1,44 @@
+0. Read the licenses. Don't like them, don't run the MUD.
+
+Things you're going to have to do to try and get this running. This has only ever worked on a Fedora distro, so if you're trying to do anything different, good luck.
+
+1. You will need four MYSQL databases, a MYSQL username with access to these databases, and the password for this username. Name them rpi_engine, rpi_player, rpi_player_log, and rpi_world_log.
+
+2. Once done, edit ./.rpi_engine/config for all the relevant information. While you're there, be sure to set up the location of the MUD too.
+
+3. Go to ./generic/sql. There, you will find six sql files - one for each of the databases you just made, and two more that will create a test Account and Player called God. These files will fill out the structure of the database. Load each of them in to the database.
+
+4. Go to ./src. Edit the makefile so that everything is pointing in the right direction. 
+
+5. Type make. Godspeed if this doesn't work, because you're going to have to figure it out on your own. Things that might go wrong:
+
+   + have you installed the libraries for both c and c++? The RPI-engine uses both.
+   + have you installed the mysql developer libraries, and configured their location in the makefile?
+   + you might get thrown at server.cpp if your distro can't find cstdlib. Make sure you have it.
+
+You're also going to see an ungodly amount of warnings depending on your distro, and not depending on your distro because a lot of people got sloppy over the years and never did anything to fix it.
+
+6. Make sure everything in the directory and subdirectory is going to be readable and writable by the user that will be running the server. Use chmod and chown to fix this if it isn't the case.
+
+7. Go to home. Try "./start-server pp &". If it loads, congratulations. If it doesn't load, you're on your own.
+
+8. If it did work, logon to whatever port you set it to. There should be a default character with username "God", and password "changeme" if you followed the msql step up above.
+
+9. Get working.
+
+10: A variety of notes:
+
+* ./src is where the code is.
+* ./lib is where all instance-data is kept, things like objects, orders, stayput mobiles, etc.
+* ./generic has nothing but the template .sql files.
+* ./regions is where all the worldfiles are saved, along with the registry and a few other odds and ends.
+* ./crashes is where one-half of the crash-logs are kept. ./lib is the other. Someone broke gdb-parsing of crash-logs a while back: you're going to try and fix that ASAP unless you want even more mysterious crashes.
+* ./bin is where the executable is stored.
+* ./tmp is where output from the server is kept.
+
+* ./lib/text is a variety of texts people see when navigating through the menus of the MUD.
+* ./regions/registry is where all the skill formulas are kept.
+
+11. You probably want to create at least two instances of the file structure - a playerport, and a buildport. Different rules apply to the playerport and buildport, namely, everything is frozen on the buildport and you can't make permanent changes to the worldfiles on the playerport.
+
+12. You're also going to have to re-enable account creation, set up a mail server, and a whole bunch of other stuff too. Have fun.

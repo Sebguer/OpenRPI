@@ -1,0 +1,10 @@
+Select the physical aspects of your character's body.  This is broken
+down into two basic catagories - frame and height - and will be used for
+sizing the various equipment found in the game.  Size will also be used
+for determining modifiers to your character, such as weight. Please type
+the height and frame on one line, using the list below.
+  
+    Height: Tiny/Short/Average/Tall/Giant
+    Frame: Feather/Scant/Light/Medium/Heavy/Massive/Mammoth
+
+

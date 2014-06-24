@@ -1,0 +1,39 @@
+/*
+ * Shadows of Isildur RPI Engine, Production
+ * Publicly Released December 2007
+ * Copyright C. W. McHenry [Traithe], 2007
+ *
+ * Software License and Terms of Use
+ */
+
+By using any part of any of the materials provided in this package (hereinafter
+referred to as "the server") in any way, you agree and stipulate that your
+breach of any of these provisions below, save #2 and #3, or your breach of any
+of the provisions contained in the DIKU license (enumerated in the DIKU_LICENSE
+file found within this package or the lib/ directory), will serve
+constructively as an immediate and complete revocation of your legal rights to
+use or modify this server or any derivative works created from it.
+
+
+1. "Harshlands: Charles Rand" and "Shadows of Isildur: C. W. McHenry" MUST appear
+   somewhere on your MUD's greeting screen, IN ADDITION TO the DIKU credits.
+
+2. While a link to us (www.middle-earth.us) on your website isn't required, it
+   would be greatly appreciated. Be sure to let us know if you do decide to link!
+
+3. Any individuals who use this server to create a MUD, or even just tinker around,
+   should notify me - Traithe - at traithe@middle-earth.us. It's always nice to
+   hear about when someone's getting some use out of my work!
+
+4. Any derivative works created via use of this server are still bound by these
+   conditions; both the SOI_LICENSE and the DIKU_LICENSE files must remain intact
+   in the lib/ directory if you choose to distribute any derivative works.
+
+5. Any distribution of this server outside the Shadows of Isildur website at
+   www.middle-earth.us is strictly prohibited. Any such codebases distributed
+   from other sources will be considered infringements, and therefore will not
+   transfer to their users the legal right to execute or modify this server.
+
+
+09.13.2009
+traithe@middle-earth.us

@@ -1,0 +1,68 @@
+/*
+ * Shadows of Isildur RPI Engine, Production
+ * Publicly Released December 2007
+ * Copyright C. W. McHenry [Traithe], 2007
+ *
+ * Included License: Original DIKU Gamma
+ */
+
+
+/***********************************************************************
+* Copyright (C) 1990, 1991
+* All Rights Reserved
+************************************************************************/
+
+                             DikuMud License
+                      Program and Concept created by
+
+Sebastian Hammer
+Michael Seifert
+Hans Henrik Staerfeldt
+Tom Madsen
+Katja Nyboe
+
+This document contains the rules by which you can use, alter or publish
+parts of DikuMud. DikuMud has been created by the above five listed
+persons in their spare time, at DIKU (Computer Science Instutute at Copenhagen
+University). You are legally bound to follow the rules described in this
+document.
+
+Rules:
+
+   !! DikuMud is NOT Public Domain, shareware, careware or the like !!
+
+   You may under no circumstances make profit on *ANY* part of DikuMud in
+   any possible way. You may under no circumstances charge money for
+   distributing any part of dikumud - this includes the usual $5 charge
+   for "sending the disk" or "just for the disk" etc.
+   By breaking these rules you violate the agreement between us and the
+   University, and hence will be sued.
+
+   You may not remove any copyright notices from any of the documents or
+   sources given to you.
+
+   This license must *always* be included "as is" if you copy or give
+   away any part of DikuMud (which is to be done as described in this
+   document).
+
+   If you publish *any* part of dikumud, we as creators must appear in the
+   article, and the article must be clearly copyrighted subject to this
+   license. Before publishing you must first send us a message, by
+   snail-mail or e-mail, and inform us what, where and when you are
+   publishing (remember to include your address, name etc.)
+
+   If you wish to setup a version of DikuMud on any computer system, you
+   must send us a message , by snail-mail or e-mail, and inform us where
+   and when you are running the game. (remember to include
+   your address, name etc.)
+
+   Any running version of DikuMud must include our names in the login
+   sequence. Furthermore the "credits" command shall always cointain
+   our name, addresses, and a notice which states we have created DikuMud.
+
+   You are allowed to alter DikuMud, source and documentation as long as
+   you do not violate any of the above stated rules.
+
+Regards,
+
+The DikuMud Group

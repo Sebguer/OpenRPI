@@ -1,0 +1,26 @@
+At this point, you must decide the attributes at which you wish your
+character to excel.  Choose carefully with a mind towards the ultimate
+goal you wish your character to one day achieve.  The attributes which
+are currently a part of the game are:
+     str: Strength      - The physical strength of your character.
+     dex: Dexterity     - The hand/eye coordination of your character.
+     agi: Agility       - The natural agility of your character.
+     con: Constitution  - The health and stamina of your character.
+     wil: Willpower     - Your character's mental fortitude and faith.
+     int: Intelligence  - Your character's reasoning and learning abilities.
+
+For a list of skills and attributes to help you choose, visit:
+http://www.atonementrpi.com and go to the site's "Resources" section.
+
+Type the attributes by their three letter initials on one line, in
+the order of power and preference you wish.  The first attribute will
+be rolled the highest, the last will be rolled the lowest. You will
+then have several bonus points added, so they may not come out in the
+exact order you entered.
+
+If you would prefer an average distribution of attributes, such that
+all are average rather than some being high, some being low, and some
+being medium, then just type #6average#0. Your attributes will then
+only be slightly randomised. You will receive the same total attribute
+points through either method.
+

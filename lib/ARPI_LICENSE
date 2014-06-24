@@ -1,0 +1,30 @@
+/*
+ * Atonement RPI Engine, Production
+ * Publicly Released July 2012
+ * Copyright J.P.H [Kithrater], 2012
+ *
+ * Software License and Terms of Use
+ */
+
+By using any part of any of the materials provided in this package (hereinafter
+referred to as "the server") in any way, you agree and stipulate that your
+breach of any of these provisions below, or your breach of any of the provisions 
+contained in the DIKU or SOI licenses (enumerated in the DIKU_LICENSE and 
+SOI_LICENSE files found within this package or the lib/directory), will serve
+constructively as an immediate and complete revocation of your legal rights to
+use or modify this server or any derivative works created from it.
+
+1. "Atonement RPI: Kithrater" must appear somehere on your MUD's greeting screen,
+   in addition to the DIKU and SOI credits.
+
+2. Any derivative works created via use of this server are still bound by these
+   conditions; the ARPI_LICENSE, the SOI_LICENSE, and the DIKU_LICENSE files must 
+   remain intact in the lib/ directory if you choose to distribute any derivative
+   works.
+
+3. Any distribution of this server from anyone other than Kithrater is strictly 
+   prohibited. Any such codebases distributed from other sources will be 
+   considered infringements, and therefore will not transfer to their users the 
+   legal right to execute or modify this server.
+
+

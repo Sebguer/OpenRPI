@@ -1,0 +1,38 @@
+[CRAFTS]
+craft armoring-robotic subcraft ordinary-fabric-coverings command sew
+  fail: 12007 12007 12007 12007 12007 12007 12007 12007 12007 12007 12007 12007 12007 12007 12007 12007 12007 12007 12007 12007
+  ic_delay: 2
+ opening: 36
+  phase
+    1st:  You unroll a portion of $1, laying out $2 upon it to begin working on the pattern.
+    3rd:  $n unrolls a portion of $1, laying out $2 upon it.
+      t:  10
+
+      1:  (sampled x60 11014 11004 11008)
+      2:  (held 8126)
+      1;  ($botcover 2 1 4)
+      2;  ($color 1 0 4)
+      3;  ($finecolor 1 0 4)
+      4;  ($drabcolor 1 0 4)
+      5;  ($plasticcolor 1 0 4)
+      6;  ($metalcolor 1 0 4)
+      7;  ($darkcolor 1 0 4)
+      8;  ($lizcolor 1 0 4)
+      9;  ($leathercolor 1 0 4)
+  phase
+1stfail:  You begin working along the pattern, but soon have mangled your work beyond use.
+3rdfail:  $n mangles their material and stops.
+    1st:  You carefully measure and cut your material with $3.
+    3rd:  $n cuts the material.
+      t:  10
+
+  skill:  Handicraft vs 1d40
+  phase
+    1st:  You finish cutting, stitching $4 into shape and setting it out.
+    3rd:  $n finishes cutting, stitching $4 and setting it out.
+      t:  10
+
+      3:  (sampled x20 8072)
+      4:  (produced 6512)
+end
+[end-crafts]

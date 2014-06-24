@@ -1,0 +1,51 @@
+Brawling       "(dex + int) / 3"   "(int + dex) / 2"  "str + (dex * 2) + (agi * 2) + (int / 2)"
+Bludgeon       "(dex + int) / 3"   "(int + dex) / 2"  "((dex * 6) + (str*2) + (agi * 2) + int) / 2"
+Flail          "(dex + int) / 3"   "(int + dex) / 2"  "((dex * 5) + (agi * 3) + (str*2) + int) / 2"
+Polearm        "(dex + int) / 3"   "(int + dex) / 2"  "((dex * 6) + (agi * 3) + str + int) / 2"
+Small-Blade    "(dex + int) / 3"   "(int + dex) / 2"  "((dex * 7) + (agi * 3) + int) / 2"
+Long-Blade     "(dex + int) / 3"   "(int + dex) / 2"  "((dex * 6) + (agi*2) + (str*2) + int) / 2"
+
+Avert          "(dex + int) / 2"   "(int + dex) / 2"  "((dex * 7) + (agi * 3) + int)/2"
+Dodge          "(agi + int) / 2"   "(int + agi) / 2"  "(agi * 4) + dex + (int / 2)"
+
+Double-Handed  "(str + agi) / 3"   "(str + dex) / 3"  "(str*2) + (agi*2) + (dex) + (int/2)"
+Dual-Wield     "(dex + agi) / 3"   "(agi + dex) / 3"  "(dex * 2) + (agi * 3) + (int / 2)"
+Shield-Use     "(dex + agi) / 3"   "(agi + dex) / 3"  "(dex*2) + (agi*2) + (str) + (int/2)"
+Sole-Wield     "(agi * 2) / 3"     "(agi * 2) / 3"    "((agi*6) + (dex*4) + (int))/2"
+
+Throwing       "(dex + agi) / 2"   "(dex + agi) / 2"  "dex*3 + agi + 15"
+Archery        "(dex + agi) / 2"   "(dex + agi) / 2"  "dex*3 + agi + 15"
+Pistol         "(dex + int) / 2"   "(dex + int) / 2"  "dex*3 + agi + 15"
+Rifle          "(dex + int) / 2"   "(dex + int) / 2"  "dex*3 + agi + 15"
+Heavygun       "(dex + int) / 2"   "(dex + int) / 2"  "dex*3 + agi + 15"
+
+Cookery        "(dex + wil) / 2"   "(int + wil) / 2"  "int*3 + dex*1 + 10"
+Engineering    "(dex + wil) / 2"   "(int + wil) / 2"  "int*3 + dex*1 + 10"
+Gunsmithing    "(dex + wil) / 2"   "(int + wil) / 2"  "int*3 + dex*1 + 10"
+
+Chemistry      "(int + wil) / 2"   "(int + wil) / 2"  "int*3 + wil + 20"  
+Research       "(int + wil) / 2"   "(int + wil) / 2"  "int*3 + wil + 20"  
+
+Mining         "(str + dex) / 2"   "(str + dex) / 2"  "(str + con) * 2 + 10"
+
+
+Barter         "(int + wil) / 2"   "(int + wil) / 2"  "int*3 + wil*2 + 5"
+Medicine       "(int + dex) / 2"   "(int + dex)"      "int*2 + dex*2 + wil + 5"
+Hide           "(int + agi) / 2"   "(int + agi) / 2"  "agi*4 + wil + int"
+Sneak          "(int + agi) / 2"   "(int + agi) / 2"  "agi*4 + dex + int"
+Tracking       "(dex + int) / 2"   "(wil + int) / 2"  "wil*2 + int*2 + 15"
+Steal          "(int + dex) / 2"   "(int + dex) / 2"  "dex*2 + agi + int + wil + 5"
+Eavesdrop      "(int + wil) / 2"   "(int + wil) / 4"  "int*5 + 5"
+
+Magic          "aur"               "aur / 4"          "aur*4 + 15"
+
+Woodcraft      "(dex + wil) / 2"   "(dex + wil) / 2"  "dex*3 + wil + 20"
+Astronomy      "(int + wil) / 2"   "(int + wil) / 2"  "int*4 + wil + 10"  
+Ride           "(wil + agi) / 2"   "(int + agi) / 2"  "agi*3 + dex + wil + 10"
+Butchery       "(int + dex) / 2"   "(int + dex) / 2"  "dex*3 + int + wil + 10"
+Picklock       "(int + dex) / 2"   "(int + dex) / 2"  "int + dex*2 + agi + wil"
+Forage         "(int + wil) / 2"   "(int + wil) / 2"  "int*3 + dex + 10"  
+
+Literacy       "(int + wil) / 2"   "int / 3"          "50"
+
+Common         "50"                "50"               "50"

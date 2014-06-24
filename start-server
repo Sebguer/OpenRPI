@@ -1,0 +1,67 @@
+#!/bin/sh
+
+SERVER_PORT_BASEDIR="."
+SERVER_RESTARTS=20
+i=0
+SERVER_OUTPUT_LOG_BASENAME="./tmp/rpi_engine_output"
+
+PLAYER_PORT=4500
+BUILDER_PORT=4501
+TEST_PORT=4502
+
+# Figure out what port the user wants
+case "$1" in
+  pp*) port_number=$PLAYER_PORT;;
+  bp*) port_number=$BUILDER_PORT;;
+  tp*) port_number=$TEST_PORT;;
+  *) echo "Please select a port: pp, bp, or tp"; exit 0;;
+esac
+
+# Make sure we have an executable
+if [ ! -x $SERVER_PORT_BASEDIR/bin/server ]
+then
+  echo "Error: Couldn't find the $1 server executable!"
+  exit 0;
+fi
+
+# Change the working directory
+cd $SERVER_PORT_BASEDIR
+echo "The working directory is now" `pwd`
+
+# Remove the bootlock
+if [ -f "$SERVER_PORT_BASEDIR/lib/booting" ]
+then
+  echo "Removing stale boot lock."
+  rm -f -v "$SERVER_PORT_BASEDIR/lib/booting"
+fi
+
+# Remove stdout logs
+if [ -f "$SERVER_OUTPUT_LOG_BASENAME.$port_number-1.txt" ]
+then
+  echo "Removing stale stdout logs."
+  rm -f -v $SERVER_OUTPUT_LOG_BASENAME.$port_number-*.txt
+fi 
+
+# Start the RPI Engine
+echo "Starting the RPI Engine on port:  $port_number, will attempt $SERVER_RESTARTS restarts"
+while [ $i -le "$SERVER_RESTARTS" ]
+do
+  i=$(($i+1))
+  echo "Logging stdout to $SERVER_OUTPUT_LOG_BASENAME.$port_number-$i.txt"
+  $SERVER_PORT_BASEDIR/bin/server $port_number 2>&1 | tee "$SERVER_OUTPUT_LOG_BASENAME.$port_number-$i.txt"
+
+  if [ -f "$SERVER_PORT_BASEDIR/lib/booting" ]
+  then
+    echo "Server quit during boot sequence."
+    break;
+  fi
+wait
+done
+
+# Finish up
+echo "The RPI Engine has shutdown. "
+cd - > /dev/null
+echo "The working directory is now" `pwd`
+chmod 661 $SERVER_OUTPUT_LOG_BASENAME.$port_number-*.*
+chown kithrater:arpi $SERVER_OUTPUT_LOG_BASENAME.$port_number-*.*
+

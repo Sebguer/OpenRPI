@@ -1,0 +1,635 @@
+kiss
+0 0
+Who do you want to kiss?
+#
+You kiss $N
+$n kisses $N.
+$n kisses you.
+What good would that do?
+Sorry, the kiss social doesn't work that way.
+#
+bounce
+0 0
+You bounce around, unable to control your excitement.
+$n bounces around excitedly.
+#
+smile
+0 0
+You smile.
+$n smiles.
+You smile at $N.
+$n smiles at $N.
+$n smiles at you.
+What good would that do?
+You smile at yourself.
+$n smiles at $mself.
+laugh
+0 0
+You laugh.
+$n laughs.
+You laugh at $N.
+$n laughs at $N.
+$n laughs at you.
+What good would that do?
+You laugh at yourself.
+$n laughs at $mself.
+giggle
+0 0
+You giggle.
+$n giggles.
+#
+shake
+0 5
+You shake your head.
+$n shakes $s head.
+#
+growl
+0 0
+You growl.
+$n growls.
+You growl at $N.
+$n growls at $N.
+$n growls at you.
+What good would that do?
+You growl quietly.
+$n growls quietly.
+nod
+1 0
+You nod.
+$n nods.
+You nod to $N.
+$n nods to $N.
+$n nods to you.
+What good would that do?
+You nod slowly.
+$n nods slowly.
+sigh
+0 0
+You sigh.
+$n sighs.
+#
+hug
+1 5
+Who do you want to hug?
+#
+You give $N a hug.
+$n gives $N a hug.
+$n gives you a hug.
+What good would that do?
+You hug yourself.
+$n hugs $mself.
+grin
+0 0
+You grin.
+$n grins.
+You grin at $N.
+$n grins at $N.
+$n grins at you.
+What good would that do.
+Sorry, the grin social doesn't work that way.
+#
+bow
+0 5
+You bow respectfully.
+$n bows respectfully.
+You bow before $N.
+$n bows before $N.
+$n bows before you.
+What good would that do.
+Sorry, the bow social doesn't work that way.
+#
+burp
+0 0
+You burp.
+$n burps.
+#
+chuckle
+0 0
+You chuckle.
+$n chuckles.
+You chuckle at $N.
+$n chuckles at $N.
+$n chuckles at you.
+What good would that do?
+You chuckle quietly.
+$n chuckles quietly.
+cough
+0 0
+You cough.
+$n coughs.
+#
+curtsey
+0 0
+You curtsey.
+$n curtseys.
+You curtsey before $N.
+$n curtseys before $N.
+$n curtseys before you.
+What good would that do?
+Sorry, the curtsey social doesn't work that way.
+#
+frown
+0 0
+You frown.
+$n frowns.
+You look at $N and frown.
+$n looks at $N and frowns.
+$n looks at you and frowns.
+What good would that do?
+Sorry, the frown social doesn't work that way.
+#
+gasp
+0 0
+You gasp.
+$n gasps.
+You look at $N and gasp.
+$n looks at $N and gasps.
+$n looks at you and gasps.
+What good would that do?
+Sorry, the gasp social doesn't work that way.
+#
+glare
+0 0
+You glare.
+$n glares.
+You glare at $N.
+$n glares at $N.
+$n glares at you.
+What good would that do?
+Sorry, the glare social doesn't work that way.
+#
+groan
+0 0
+You groan.
+$n groans.
+#
+hiccup
+0 0
+You hiccup.
+$n hiccups.
+#
+moan
+0 0
+You moan.
+$n moans.
+#
+shiver
+0 0
+You shiver.
+$n shivers.
+You look at $N and shiver.
+$n looks at $N and shivers.
+$n looks at you and shivers.
+What good would that do?
+You shiver at the thought of yourself.
+$n shivers.
+shrug
+0 0
+You shrug.
+$n shrugs.
+You look at $N and shrug.
+$n looks at $N and shrugs.
+$n looks at you and shrugs.
+What good would that do?
+Sorry, the shrug social doesn't work that way.
+#
+smirk
+0 0
+You smirk.
+$n smirks.
+You look at $N and smirk.
+$n looks at $N and smirks.
+$n looks at you and smirks.
+What good would that do?
+Sorry, the smirk social doesn't work that way.
+#
+snap
+0 0
+You snap your fingers.
+$n snaps $s fingers.
+You snap your fingers to get $N's attention.
+$n snaps $s fingers to get $N's attention.
+$n snaps $s fingers to get your attention.
+What good would that do?
+Sorry, the snap social doesn't work that way.
+#
+sneeze
+0 0
+You sneeze.
+$n sneezes.
+#
+snicker
+0 0
+You snicker.
+$n snickers.
+You look at $N and snicker.
+$n looks at $N and snickers.
+$n looks at you and snickers.
+What good would that do?
+You snicker softly.
+$n snickers softly.
+sniff
+0 0
+You sniff.
+$n sniffs.
+You sniff $N.
+$n sniffs $N.
+$n sniffs you.
+What good would that do?
+You sniff yourself.
+$n sniffs $mself.
+snore
+0 0
+You snore.
+$n snores.
+#
+squeeze
+0 0
+Who do you want to squeeze?
+#
+wave
+0 0
+You wave.
+$n waves.
+You wave to $N.
+$n waves to $N.
+$n waves to you.
+What good would that do?
+Sorry, the wave social doesn't work that way.
+#
+whistle
+0 0
+You whistle.
+$n whistles.
+You whistle at $N.
+$n whistles at $N.
+$n whistles at you.
+What good would that do?
+You whistle to yourself.
+$n whistles to $mself.
+wink
+0 5
+You wink.
+$n winks.
+You wink at $N.
+$n winks at $N.
+$n winks at you.
+What good would that do?
+Sorry, the wink social doesn't work that way.
+#
+yawn
+0 0
+You yawn.
+$n yawns.
+#
+swear
+0 0
+You swear foully.
+$n swears foully.
+You swear at $N.
+$n swears at $N.
+$n swears at you.
+What good would that do?
+You swear under your breath.
+$n swears under $s breath.
+bleed
+0 0
+You bleed.
+$n bleeds.
+#
+afk
+0 5
+You go away from keys.
+$n goes afk for a little bit.
+#
+ah
+1 0
+Ah, you get it.
+$n ahs.
+#
+bak
+0 5
+You let them all know that you are back.
+$n is back.
+#
+bark
+0 0
+You bark.
+$n barks.
+You bark at $N.
+$n barks at $N.
+$n barks at you.
+What good would that do?
+Sorry, the bark social doesn't work that way.
+#
+bgrin
+0 0
+You grin broadly.
+$n grins broadly.
+You grin broadly at $N.
+$n grins broadly at $N.
+$n grins broadly at you.
+What good would that do?
+Sorry, the bgrin social doesn't work that way.
+#
+egrin
+0 0
+You grin evilly.
+$n grins evilly.
+You grin evilly at $N.
+$n grins evilly at $N.
+$n grins evilly at you.
+What good would that do?
+Sorry, the egrin social doesn't work that way.
+#
+blink
+0 0
+You blink.
+$n blinks.
+#
+brb
+0 5
+You let them all know that you'll be right back.
+$n will be right back.
+#
+clear
+0 0
+You clear your throat.
+$n clears $s throat.
+#
+cluck
+0 0
+You cluck your tongue.
+$n clucks $s tongue.
+#
+cower
+1 0
+You cower back.
+$n cowers back.
+You cower back from $N.
+$n cowers back from $N.
+$n cowers back from you.
+What good would that do?
+Sorry, the cower social doesn't work that way.
+#
+crack
+0 0
+You crack your knuckles.
+$n cracks $s knuckles.
+You look at $N and crack your knuckles.
+$n looks at $N and cracks $s knuckles
+$n looks at you and cracks $s knuckles.
+What good would that do?
+You quietly crack your knuckles.
+$n quietly cracks $s knuckles.
+cross
+0 0
+You cross your fingers.
+$n crosses $s fingers.
+#
+eye
+0 0
+You raise a brow.
+$n raises a brow.
+You raise a brow at $N.
+$n raises a brow at $N.
+$n raises a brow at you.
+What good would that do?
+Sorry, the eye social doesn't work that way.
+flinch
+0 0
+You flinch.
+$n flinches.
+#
+greet
+0 5
+You nod in greeting.
+$n nods in greeting.
+You nod in greeting to $N.
+$n nods in greeting to $N.
+$n nods in greeting to you.
+What good would that do?
+Sorry, the greet social doesn't work that way.
+#
+grumble
+0 0
+You grumble.
+$n grumbles.
+You grumble about $N.
+$n grumbles about $N.
+$n grumbles about you.
+What good would that do?
+You grumble under your breath.
+$n grumbles under $s breath.
+grunt
+0 0
+You grunt.
+$n grunts.
+You grunt at $N.
+$n grunts at $N.
+$n grunts at you.
+What good would that do?
+Sorry, the grunt social doesn't work that way.
+#
+howl
+0 0
+You howl.
+$n howls.
+#
+hshake
+0 0
+Whose hand do you want to shake?
+#
+You shake $N's hand.
+$n shakes $n's hand.
+$n shakes your hand.
+What good would that do?
+Sorry, the hshake social doesn't work that way.
+#
+lag
+0 5
+You let them all know that you're lagging.
+$n is lagging.
+#
+mchuckle
+0 0
+You chuckle mischievously.
+$n chuckles mischievously.
+You chuckle mischievously at $N.
+$n chuckles mischievously at $N.
+$n chuckles mischievously at you.
+What good would that do?
+Sorry, the mchuckle social doesn't work that way.
+#
+mgrin
+0 0
+You grin mischievously.
+$n grins mischievously.
+You grin mischievously at $N.
+$n grins mischievously at $N.
+$n grins mischievously at you.
+What good would that do?
+Sorry, the mgrin social doesn't work that way.
+#
+mumble
+0 0
+You mumble.
+$n mumbles something.
+You mumble something about $N.
+$n mumbles something about $N.
+$n mumbles something about you.
+What good would that do?
+You mumble something under your breath.
+$n mumbles something under $s breath.
+mutter
+0 0
+You mutter something under your breath.
+$n mutters something under $s breath.
+You mutter something about $N.
+$n mutters something about $N.
+$n mutters something about you.
+What good would that do?
+You mutter something under your breath.
+$n mutters something under $s breath.
+reye
+0 0
+You roll your eyes.
+$n rolls $s eyes.
+You roll your eyes at $N.
+$n rolls $s eyes at $N.
+$n rolls $s eyes at you.
+What good would that do?
+Sorry, the reye social doesn't work that way.
+#
+lsad
+0 5
+You look sad.
+$n looks sad.
+#
+lhappy
+0 5
+You look happy
+$n looks happy.
+#
+lconfused
+0 5
+You look confused.
+$n looks confused.
+#
+salute
+0 0
+Who do you want to salute?
+#
+You salute $N.
+$n salutes $N.
+$n salutes you.
+What good would that do?
+Sorry, the salute social doesn't work that way.
+#
+scoff
+0 0
+You scoff.
+$n scoffs.
+You scoff at $N.
+$n scoffs at $N.
+$n scoffs at you.
+What good would that do?
+Sorry, the scoff social doesn't work that way.
+#
+scowl
+0 0
+You scowl.
+$n scowls.
+#
+slouch
+0 0
+You slouch.
+$n slouches.
+#
+snarl
+0 0
+You snarl.
+$n snarls.
+You snarl at $N.
+$n snarls at $N.
+$n snarls at you.
+What good would that do?
+Sorry, the snarl social doesn't work that way.
+#
+sneer
+0 0
+You sneer.
+$n sneers.
+You sneer at $N.
+$n sneers at $N.
+$n sneers at you.
+What good would that do?
+Sorry, the sneer social doesn't work that way.
+#
+snort
+0 0
+You snort.
+$n snorts.
+#
+stifle
+0 0
+You stifle a yawn.
+$n stifles a yawn.
+#
+stroke
+0 0
+You stroke your chin.
+$n strokes $s chin.
+#
+tongue
+0 0
+You stick out your tongue.
+$n sticks out $s tongue.
+You stick you tongue out at $N.
+$n sticks $s tongue out at $N.
+$n sticks $s tongue out at you.
+What good would that do?
+Sorry, the tongue social doesn't work that way.
+#
+touch
+0 0
+Who do you want to touch?
+#
+You touch $N.
+$n touches $N.
+$n touches you.
+What good would that do?
+Sorry, the touch social doesn't work that way.
+#
+tremble
+0 0
+You start to tremble.
+$n starts to tremble.
+#
+twitch
+0 0
+You twitch.
+$n twitches.
+#
+vshake
+0 0
+You start to shake violently!
+$n starts to shake violently!
+#
+whimper
+0 0
+You whimper.
+$n whimpers.
+You whimper at $N.
+$n whimpers at $N.
+$n whimpers at you.
+What good would that do?
+You quietly whimper.
+$n quietly whimpers.
+whine
+0 0
+You start to whine.
+$n starts to whine.
+#
+#
+--------------4829431BA99--
