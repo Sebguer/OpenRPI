@@ -92,9 +92,9 @@ Assign it a password, and remember that password. You can ignore the rest of the
 Now type:
 
 cd ~
-git clone http://gitlab.michaelguer.in/Sebguer/rpi-engine.git
+git clone https://github.com/Sebguer/OpenRPI.git
 
-Use your gitlab username and password.
+Use your github username and password.
 
 Once it's finished type:
 ...
