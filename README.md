@@ -45,7 +45,7 @@ Once it's finished, type:
 
 apt-get install libmysqlclient-dev
 
-apt-get install -y mysql-server gcc git
+apt-get install -y mysql-server gcc git g++ make
 
 In the middle of the installation, it will prompt you for a MySQL password.
 Choose something, and make a note of it.
