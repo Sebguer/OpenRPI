@@ -96,7 +96,7 @@ Assign it a password, and remember that password. You can ignore the rest of the
 Now type:
 
 cd ~
-git clone https://github.com/YourCyborg/SORPI.git
+git clone git@github.com:Sebguer/OpenRPI.git
 
 Now we're going to add all of the sql files in *RPI into those databases you just made.
 
