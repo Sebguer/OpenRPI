@@ -1,7 +1,7 @@
-# You will probably want to change these lines
+# These lines will be auto-updated by the install script.
 mysql_host = "localhost";
-mysql_user = "prpiadmin";
-mysql_passwd = "seriouslyfuckingsecure";
+mysql_user = "root";
+mysql_passwd = "password";
 
 # Check these too:
 engine_db = "rpi_engine";
