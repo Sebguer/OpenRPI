@@ -63,5 +63,5 @@ echo "The RPI Engine has shutdown. "
 cd - > /dev/null
 echo "The working directory is now" `pwd`
 chmod 661 $SERVER_OUTPUT_LOG_BASENAME.$port_number-*.*
-chown kithrater:arpi $SERVER_OUTPUT_LOG_BASENAME.$port_number-*.*
+chown rpiadmin:rpiadmin $SERVER_OUTPUT_LOG_BASENAME.$port_number-*.*
 
