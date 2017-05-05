@@ -2010,7 +2010,7 @@ CREATE TABLE `virtual_boards` (
   `date_posted` varchar(75) default NULL,
   `message` text,
   `timestamp` int(11) default NULL,
-  KEY `board_name_idx` (`board_name`),
+  PRIMARY KEY `board_name_idx` (`board_name`),
   KEY `post_number` (`post_number`),
   KEY `timestamp` (`timestamp`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
