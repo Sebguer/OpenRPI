@@ -6,14 +6,15 @@ To install the engine, you'll need a Linux server. I've tested it in Ubuntu 16.0
 
 Once logged into your server, you'll just need to run the following two commands:
 
-wget https://gist.githubusercontent.com/Sebguer/134b9f80ddc5bdcd749d5618bf3df01d/raw/84d634e8d7c3f031f9a680fd8c39d3d191d99bed/install.sh
-sh install.sh
+`wget https://gist.githubusercontent.com/Sebguer/134b9f80ddc5bdcd749d5618bf3df01d/raw/84d634e8d7c3f031f9a680fd8c39d3d191d99bed/install.sh`
+
+`sh install.sh`
 
 Once this script finishes, you'll have three folders with the engine. One Player Port, one Build Port, and one Testing Port. These default to ports 4500-4502.
 
 In any of these folders you can start the server from the main directory with:
 
-sh start-server bp &
+`sh start-server bp &`
 
 Replacing bp with the appropriate type of port (pp, bp, or tp).
 
