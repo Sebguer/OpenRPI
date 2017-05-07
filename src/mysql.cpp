@@ -746,6 +746,7 @@ void save_craft_progs (void)
 	}
 }
 
+/* This is useless right now.
 
 void update_family_clanning (DESCRIPTOR_DATA * d)
 {
@@ -851,8 +852,7 @@ void update_family_clanning (DESCRIPTOR_DATA * d)
 	}
 
 }
-
-
+*/
 
 // Loads the master race table containing all race defines at boot
 
@@ -901,7 +901,7 @@ void
 		entry->group_noun = atoi(row[RACE_GROUP_NOUN]);
 		entry->tracks = atoi(row[RACE_TRACKS]);
 		entry->corpse = atoi(row[RACE_CORPSE]);
-		entry->type = atoi(row[RACE_TYPE]);
+		entry->race_type = atoi(row[RACE_TYPE]);
 		entry->door_bits = atoi(row[RACE_DOOR_BITS]);
 		entry->bot_bits = atoi(row[RACE_BOT_BITS]);
 		entry->nomad = atoi(row[RACE_NOMAD]);
@@ -1061,7 +1061,7 @@ int
 		else if (which_var == RACE_CORPSE)
 			looked_up = entry->corpse;
 		else if (which_var == RACE_TYPE)
-			looked_up = entry->type;
+			looked_up = entry->race_type;
 		else if (which_var == RACE_DOOR_BITS)
 			looked_up = entry->door_bits;
 		else if (which_var == RACE_BOT_BITS)
