@@ -3482,7 +3482,7 @@ nanny_choose_pc (DESCRIPTOR_DATA * d, char *argument)
 
     d->character->pc->last_logon = time (0);
 
-	update_family_clanning (d);
+	//update_family_clanning (d);
 
 	conflicting_clan_check(d->character);
 

@@ -679,7 +679,7 @@ void load_mob_ais (void);
 void load_foraged_goods (void);
 void save_foraged_goods (void);
 
-void update_family_clanning (DESCRIPTOR_DATA * d);
+//void update_family_clanning (DESCRIPTOR_DATA * d);
 void conflicting_clan_check(CHAR_DATA *ch);
 
 void load_foraged_zones (void);
