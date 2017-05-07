@@ -3,7 +3,7 @@
 
 # Installation
 
-I've done some work to make setting up an engine trivial. It comes with all of the helpfiles we had for Parallel and Atonement, as well as some basic variables. 
+I've done some work to make setting up an engine trivial. It comes with all of the helpfiles we had for Parallel and Atonement, an array of variables, as well as currently four groups of items: clothing, weapons, armor, and guns.
 
 To install the engine, you'll need a Linux server. I've tested it in Ubuntu 16.04, but all recent LTSes should work without any major problems.
 
