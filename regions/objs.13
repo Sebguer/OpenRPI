@@ -1,1 +1,1147 @@
+#13000
+pistol METAL~
+a pistol~
+A pistol is here. Some admin has been -very- careless.~
+~
+28 4096 8193
+2 1 0 15
+400 0.000000
+0 0 0 0 1000 131072 0 1
+400.000000 0 0 0 0 0 0
+A
+10015 0
+God~
+God~
+#13001
+clip PLASTIC~
+a plastic clip~
+A plastic clip is here.~
+~
+37 4096 1
+0 30 0 16
+100 0.000000
+0 0 1 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13002
+round METAL~
+a round~
+A round is here.~
+~
+31 4194304 1
+0 4 0 0
+10 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13003
+barrel handgun refurbished $pistolbarrel $pistolcaliber METAL~
+a refurbished $pistolbarrel $pistolcaliber handgun barrel~
+A refurbished $pistolbarrel $pistolcaliber handgun barrel lies here.~
+This is a $pistolbarrel $pistolcaliber refurbished handgun barrel.
+~
+12 33558528 1
+0 0 0 0
+100 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13004
+barrel rifle refurbished $riflebarrel $riflecaliber METAL~
+a refurbished $riflebarrel $riflecaliber rifle barrel~
+A refurbished $riflebarrel $riflecaliber rifle barrel lies here.~
+This is a $riflebarrel $riflecaliber refurbished rifle barrel.
+~
+12 33558528 1
+0 0 0 0
+400 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13005
+barrel sub-machine gun refurbished $smgbarrel $smgcaliber METAL~
+a refurbished $smgbarrel $smgcaliber sub-machine gun barrel~
+A refurbished $smgbarrel $smgcaliber sub-machine gun barrel lies here.~
+This is a $smgbarrel $smgcaliber refurbished sub-machine gun barrel.
+~
+12 33558528 1
+0 0 0 0
+200 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13006
+barrel ruined pistol $pistolbarrel $pistolcaliber METAL~
+a ruined $pistolbarrel $pistolcaliber pistol barrel~
+A ruined $pistolbarrel $pistolcaliber pistol barrel lies here.~
+This is a $pistolbarrel $pistolcaliber pistol barrel.  It is bent and ruined. 
+~
+39 33558528 1
+1 3 13003 1
+100 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13007
+barrel ruined rifle $riflebarrel $riflecaliber METAL~
+a ruined $riflebarrel $riflecaliber rifle barrel~
+A ruined $riflebarrel $riflecaliber rifle barrel lies here.~
+This is a $riflebarrel $riflecaliber rifle barrel.  It is bent and ruined.
+~
+39 33558528 1
+1 10 13004 1
+400 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13008
+barrel ruined sub-machine gun $smgbarrel $smgcaliber METAL~
+a ruined $smgbarrel $smgcaliber sub-machine gun barrel~
+A ruined $smgbarrel $smgcaliber sub-machine gun barrel lies here.~
+This is a $smgbarrel $smgcaliber sub-machine gun barrel.  It is bent and ruined.
+~
+39 33558528 1
+1 5 13005 1
+200 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13009
+barrel handgun $pistolbarrel $pistolcaliber METAL~
+a $pistolbarrel $pistolcaliber handgun barrel~
+A $pistolbarrel $pistolcaliber handgun barrel lies here.~
+This is a $pistolbarrel $pistolcaliber handgun barrel.  It is newly manufactured, having never been used.
+~
+12 33558528 1
+0 0 0 0
+100 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13010
+barrel rifle $riflebarrel $riflecaliber METAL~
+a $riflebarrel $riflecaliber rifle barrel~
+A $riflebarrel $riflecaliber rifle barrel lies here.~
+This is a $riflebarrel $riflecaliber rifle barrel.  It is newly manufactured, having never been used.
+~
+12 33558528 1
+0 0 0 0
+400 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13011
+barrel sub-machine gun $smgbarrel $smgcaliber METAL~
+a $smgbarrel $smgcaliber sub-machine gun barrel~
+A $smgbarrel $smgcaliber sub-machine gun barrel lies here.~
+This is a $smgbarrel $smgcaliber sub-machine gun barrel.  It is newly manufactured, having never been used.
+~
+12 33558528 1
+0 0 0 0
+200 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13012
+grip handgun $wornquality2 $color0 $pistolgrip1 $polyprop3 PLASTIC~
+a $wornquality2 $color0 $pistolgrip1 handgun grip~
+A $wornquality2 $color0 $pistolgrip1 handgun grip lies here.~
+   This $color handgun grip is of a $pistolgrip style. It has 
+seen significant previous use and is $wornquality, made of 
+$polyprop. 
+~
+12 33558528 1
+0 0 0 0
+50 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13013
+stock rifle $wornquality2 $color0 $riflegrip1 $polyprop3 PLASTIC~
+a $wornquality2 $color0 $riflegrip1 rifle stock~
+A $wornquality2 $color0 $riflegrip1 rifle stock lies here.~
+This $color rifle stock is of a $riflegrip style.  It has seen significant previous use and is $wornquality, made of $polyprop. 
+~
+12 33558528 1
+0 0 0 0
+200 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13014
+grip sub-machine gun $wornquality2 $color0 $smggrip1 $polyprop3 stock PLASTIC~
+a $wornquality2 $color0 $smggrip1 sub-machine gun stock~
+A $wornquality2 $color0 $smggrip1 sub-machine gun stock lies here.~
+This $color sub-machine gun stock is of a $smggrip style.  It has seen significant previous use and is $wornquality, made of $polyprop. 
+~
+12 33558528 1
+0 0 0 0
+150 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13015
+grip handgun $color0 $pistolgrip1 $polyprop3 PLASTIC~
+a $color0 $pistolgrip1 handgun grip~
+A $color0 $pistolgrip1 handgun grip lies here.~
+   This $color handgun grip is of a $pistolgrip style. It is 
+$goodquality, made of $polyprop. 
+~
+12 33558528 1
+0 0 0 0
+50 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13016
+stock rifle $color0 $riflegrip1 $polyprop3 grip PLASTIC~
+a $color0 $riflegrip1 rifle stock~
+A $color0 $riflegrip1 rifle stock lies here.~
+   This $color rifle stock is of a $riflegrip style. It is 
+$goodquality, made of $polyprop. 
+~
+12 33558528 1
+0 0 0 0
+100 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13017
+grip sub-machine gun $color0 $smggrip1 $polyprop3 stock PLASTIC~
+a $color0 $smggrip1 sub-machine gun stock~
+A $color0 $smggrip1 sub-machine gun stock lies here.~
+   This $color sub-machine gun stock is of a $smggrip style. It 
+is $goodquality, made of $polyprop. 
+~
+12 33558528 1
+0 0 0 0
+150 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13018
+frame disassembled $pistolframe1 $metalcolor2 METAL~
+a disassembled, $metalcolor2, $pistolframe1 frame~
+A disassembled, $metalcolor2, $pistolframe1 frame lies here.~
+These are the disassembled $ironalloy-alloy workings of $pistolframe. $metalcolor
+~
+12 33558528 1
+0 0 0 0
+100 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13019
+frame disassembled $rifleframe1 $metalcolor2 METAL~
+a disassembled, $metalcolor2, $rifleframe1 frame~
+A disassembled, $metalcolor2, $rifleframe1 frame lies here.~
+These are the disassembled $ironalloy-alloy workings of $rifleframe. $metalcolor
+~
+12 33558528 1
+0 0 0 0
+200 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13020
+frame disassembled $smgframe1 $metalcolor2 METAL~
+a disassembled, $metalcolor2, $smgframe1 frame~
+A disassembled, $metalcolor2, $smgframe1 frame lies here.~
+   These are the disassembled $ironalloy-alloy workings of 
+$smgframe. $metalcolor.
+~
+12 33558528 1
+0 0 0 0
+200 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13021
+handgun $pistolframe1 $pistolbarrel2 $pistolcaliber3 $metdam7 gun METAL~
+a $pistolbarrel2, $metdam7 $pistolcaliber3 $pistolframe1~
+A $pistolbarrel2, $metdam7 $pistolcaliber3 $pistolframe1 lies here.~
+   Made of $ironalloy-alloy, this is $pistolframe, with a 
+$pistolbarrel $pistolcaliber refurbished barrel. Though worn and 
+scratched, it has $pistolgrip made of $color $polyprop. Of 
+particularly poor quality is the $metdam metal, looking to have 
+been extensively recycled and refurbished. 
+~
+28 33624064 270337
+2 9 0 11
+400 0.000000
+0 0 2 0 900 128 0 1
+200.000000 0 0 0 0 0 0
+A
+10011 -5
+God~
+God~
+#13022
+handgun $pistolframe1 $pistolbarrel2 $pistolcaliber3 $metalcolor7 gun METAL~
+a $pistolbarrel2, $metalcolor7 $pistolcaliber3 $pistolframe1~
+A $pistolbarrel2, $metalcolor7 $pistolcaliber3 $pistolframe1 is here.~
+   Made of $ironalloy-alloy, this is $pistolframe, with a $pistolbarrel 
+$pistolcaliber barrel. It is good quality, with $pistolgrip made of $color 
+$polyprop. $metalcolor 
+~
+28 33624064 270337
+2 9 0 11
+400 0.000000
+0 0 0 0 1000 131072 0 1
+400.000000 0 0 0 0 0 0
+A
+10011 0
+God~
+God~
+#13023
+rifle $rifleframe1 $riflebarrel2 $riflecaliber3 $metdam7 gun METAL~
+a $riflebarrel2, $metdam7 $riflecaliber3 $rifleframe1~
+A $riflebarrel2, $metdam7 $riflecaliber3 $rifleframe1 lies here.~
+   Made of $ironalloy-alloy, this is $rifleframe, with a 
+$riflebarrel $riflecaliber refurbished barrel. Though worn and 
+scratched, it has $riflegrip made of $color $polyprop. Of 
+particularly poor quality is the $metdam metal, looking to have 
+been extensively recycled and refurbished, now an indistinct 
+gunmetal gray in color. 
+~
+28 33624064 8921089
+3 9 0 12
+700 0.000000
+0 0 2 0 900 128 0 1
+200.000000 0 0 0 0 0 0
+A
+10012 -5
+God~
+God~
+#13024
+rifle $rifleframe1 $riflebarrel2 $riflecaliber3 $metalcolor7 gun METAL~
+a $riflebarrel2, $metalcolor7 $riflecaliber3 $rifleframe1~
+A $riflebarrel2, $metalcolor7 $riflecaliber3 $rifleframe1 lies here.~
+   Made of $ironalloy-alloy, this is $rifleframe, with a $riflebarrel 
+$riflecaliber barrel. It is good quality, with $riflegrip made of $color 
+$polyprop and $metalcolor. 
+~
+28 33624064 8921089
+3 9 0 12
+700 0.000000
+0 0 0 0 1000 131072 0 1
+400.000000 0 0 0 0 0 0
+A
+10012 0
+God~
+God~
+#13025
+SMG $smgframe1 $smgbarrel2 $smgcaliber3 $metdam7 METAL~
+a $smgbarrel2, $metdam7 $smgcaliber3 $smgframe1~
+A $smgbarrel2 $smgframe1 lies here.~
+   Made of $ironalloy-alloy, this is a $smgframe, with a 
+$smgbarrel $smgcaliber refurbished barrel. Though worn and 
+scratched, it has $smggrip made of $color $polyprop. Of 
+particularly poor quality is the $metdam metal, looking to have 
+been extensively recycled and refurbished, now an indistinct 
+gunmetal gray in color. 
+~
+28 33624064 8396801
+1 7 0 13
+900 0.000000
+3 0 2 0 900 128 0 1
+200.000000 0 0 0 0 0 0
+A
+10013 -5
+God~
+God~
+#13026
+SMG $smgframe1 $smgbarrel2 $smgcaliber3 $metalcolor7 METAL~
+a $smgbarrel2, $metcolor7 $smgcaliber3 $smgframe1~
+A $smgbarrel2, $metcolor7 $smgcaliber3 $smgframe1 lies here.~
+   Made of $ironalloy-alloy, this is $smgframe, with a $smgbarrel 
+$smgcaliber barrel. It is good quality, with $smggrip made of 
+$color $polyprop. $metalcolor
+~
+28 33624064 8396801
+1 7 0 13
+900 0.000000
+3 0 0 0 1000 131072 0 1
+400.000000 0 0 0 0 0 0
+A
+10013 0
+God~
+God~
+#13100
+round bullet pistol $bulletcaliber $bullettype METAL~
+a $bulletcaliber $bullettype pistol round~
+A $bulletcaliber $bullettype pistol round lies on the ground.~
+   This pistol bullet is $bulletcaliber, made from an alloy of 
+gold and iron. It is $bullettype. 
+~
+31 37752832 1
+0 0 0 0
+5 0.000000
+0 0 0 0 0 0 0 1
+1.000000 0 0 0 0 0 0
+God~
+God~
+#13101
+round bullet rifle $bulletcaliber $bullettype METAL~
+a $bulletcaliber $bullettype rifle round~
+A $bulletcaliber $bullettype rifle round lies on the ground.~
+   This rifle bullet is $bulletcaliber, and made from an alloy of 
+gold and iron. It is $bullettype. 
+~
+31 37752832 1
+0 0 0 0
+5 0.000000
+0 0 2 0 0 0 0 1
+2.000000 0 0 0 0 0 0
+God~
+God~
+#13102
+round bullet machine-gun smg $bulletcaliber $bullettype METAL~
+a $bulletcaliber $bullettype machine-gun round~
+A $bulletcaliber $bullettype machine-gun round lies on the ground.~
+   This sub-machine gun bullet is $bulletcaliber, and made from 
+an alloy of gold and iron. It is $bullettype. 
+~
+31 37752832 1
+0 0 0 0
+5 0.000000
+0 0 1 0 0 0 0 1
+1.500000 0 0 0 0 0 0
+God~
+God~
+#13150
+magazine pistol $clipsize0 $clipcaliber1 clip PLASTIC~
+a $clipsize0 $clipcaliber1 pistol magazine~
+A $clipsize0 $clipcaliber1 pistol magazine lies here.~
+   This is a molded plastic gun clip for holding rounds of 
+handgun ammunition. It is $clipsize, designed for $clipcaliber 
+ammunition. 
+~
+37 33558528 1
+0 0 0 0
+20 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13027
+handgun broken $metdam $wornquality pistol revolver METAL~
+a $metdam and $wornquality broken handgun~
+A $metdam and $wornquality broken handgun is discarded here.~
+   Broken and caked with grime and corrosion, this $metdam and 
+$wornquality handgun is far past its days of being usable, but 
+might have some parts to be salvaged. 
+~
+72 37752832 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13028
+rifle broken $metdam $wornquality METAL~
+a $metdam and $wornquality broken rifle~
+A $metdam and $wornquality broken rifle is discarded here.~
+Broken and caked with grime and corrosion, this $metdam and $wornquality rifle is far past its days of being usable, but might have some parts to be salvaged. 
+~
+72 37752832 1
+0 0 0 0
+700 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13029
+gun sub-machine broken $metdam $wornquality METAL smg~
+a $metdam and $wornquality broken sub-machine gun~
+A $metdam and $wornquality broken sub-machine gun is discarded here.~
+   Broken and caked with grime and corrosion, this $metdam and 
+$wornquality sub-machine gun is far past its days of being 
+usable, but might have some parts to be salvaged. 
+~
+72 37752832 1
+0 0 0 0
+900 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13030
+molds handgun $pistolframe set PLASTIC~
+a set of $pistolframe handgun molds~
+A set of $pistolframe handgun molds lies here.~
+This is a full set of molds, casts, and dies for the manufacture of $pistolframe parts.
+~
+12 37752832 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+God~
+God~
+#13031
+molds rifle $rifleframe set PLASTIC~
+a set of $rifleframe rifle molds~
+A set of $rifleframe rifle molds lie here.~
+This is a full set of molds, casts, and dies for the manufacture of $rifleframe parts.
+~
+12 37752832 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+God~
+God~
+#13032
+molds sub-machine gun $smgframe set smg PLASTIC~
+a set of $smgframe sub-machine gun molds~
+A set of $smgframe sub-machine gun molds lie here.~
+This is a full set of molds, casts, and dies for the manufacture of $smgframe parts.
+~
+12 37752832 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+God~
+God~
+#13033
+molds sub-machine gun barrel $smgbarrel $smgcaliber set smg PLASTIC~
+a set of $smgbarrel $smgcaliber submachine-gun barrel molds~
+A set of $smgbarrel $smgcaliber submachine-gun barrel molds lies here.~
+This is a full set of molds, casts, and dies for the manufacture of $smgbarrel $smgcaliber barrel parts.
+~
+12 37752832 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+God~
+God~
+#13034
+molds rifle barrel $riflebarrel $riflecaliber set PLASTIC~
+a set of $riflebarrel $riflecaliber rifle barrel molds~
+A set of $riflebarrel $riflecaliber rifle barrel molds lies here.~
+This is a full set of molds, casts, and dies for the manufacture of $riflebarrel $riflecaliber barrel parts.
+~
+12 37752832 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+God~
+God~
+#13035
+molds pistol barrel $pistolbarrel $pistolcaliber set PLASTIC~
+a set of $pistolbarrel $pistolcaliber handgun barrel molds~
+A set of $pistolbarrel $pistolcaliber handgun barrel molds lies here.~
+This is a full set of molds, casts, and dies for the manufacture of $pistolbarrel $pistolcaliber barrel parts.
+~
+12 37752832 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+God~
+God~
+#13036
+molds handgun grip $pistolgrip pistol revolver set PLASTIC~
+a set of $pistolgrip handgun grip molds~
+A set of $pistolgrip handgun grip molds lie here.~
+This is a full set of molds, casts, and dies for the manufacture of $pistolgrip.
+~
+12 37752832 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+God~
+God~
+#13037
+molds rifle stock grip $riflegrip set PLASTIC~
+a set of $riflegrip rifle stock molds~
+A set of $riflegrip rifle stock molds lie here.~
+This is a full set of molds, casts, and dies for the manufacture of $riflegrip.
+~
+12 37752832 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+God~
+God~
+#13038
+molds smg stock grip $smggrip set sub-machine gun PLASTIC~
+a set of $smggrip sub-machine gun stock molds~
+A set of $smggrip sub-machine gun stock molds lie here.~
+This is a full set of molds, casts, and dies for the manufacture of $smggrip.
+~
+12 37752832 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+God~
+God~
+#13110
+mold .20 caliber bullet PLASTIC~
+a .20 caliber bullet mold~
+A .20 caliber bullet mold rests here.~
+This is a solid heat-resistant block of material drilled with die-holes for casting .20 caliber bullets.
+~
+12 4198400 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+V
+.20~
+$bulletcaliber~
+God~
+God~
+#13112
+mold .30 caliber bullet PLASTIC~
+a .30 caliber bullet mold~
+A .30 caliber bullet mold rests here.~
+This is a solid heat-resistant block of material drilled with die-holes for casting .30 caliber bullets.
+~
+12 4198400 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+V
+.30~
+$bulletcaliber~
+God~
+God~
+#13111
+mold .25 caliber bullet PLASTIC~
+a .25 caliber bullet mold~
+A .25 caliber bullet mold rests here.~
+This is a solid heat-resistant block of material drilled with die-holes for casting .25 caliber bullets.
+~
+12 4198400 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+V
+.25~
+$bulletcaliber~
+God~
+God~
+#13113
+mold .35 caliber bullet PLASTIC~
+a .35 caliber bullet mold~
+A .35 caliber bullet mold rests here.~
+This is a solid heat-resistant block of material drilled with die-holes for casting .35 caliber bullets.
+~
+12 4198400 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+V
+.35~
+$bulletcaliber~
+God~
+God~
+#13114
+mold .40 caliber bullet PLASTIC~
+a .40 caliber bullet mold~
+A .40 caliber bullet mold rests here.~
+This is a solid heat-resistant block of material drilled with die-holes for casting .40 caliber bullets.
+~
+12 4198400 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+V
+.40~
+$bulletcaliber~
+God~
+God~
+#13115
+mold .45 caliber bullet PLASTIC~
+a .45 caliber bullet mold~
+A .45 caliber bullet mold rests here.~
+This is a solid heat-resistant block of material drilled with die-holes for casting .45 caliber bullets.
+~
+12 4198400 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+V
+.45~
+$bulletcaliber~
+God~
+God~
+#13116
+mold .50 caliber bullet PLASTIC~
+a .50 caliber bullet mold~
+A .50 caliber bullet mold rests here.~
+This is a solid heat-resistant block of material drilled with die-holes for casting .50 caliber bullets.
+~
+12 4198400 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+V
+.50~
+$bulletcaliber~
+God~
+God~
+#13117
+mold .55 caliber bullet PLASTIC~
+a .55 caliber bullet mold~
+A .55 caliber bullet mold rests here.~
+This is a solid heat-resistant block of material drilled with die-holes for casting .55 caliber bullets.
+~
+12 4198400 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+V
+.55~
+$bulletcaliber~
+God~
+God~
+#13118
+mold .60 caliber bullet PLASTIC~
+a .60 caliber bullet mold~
+A .60 caliber bullet mold rests here.~
+This is a solid heat-resistant block of material drilled with die-holes for casting .60 caliber bullets.
+~
+12 4198400 1
+0 0 0 0
+500 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+V
+.60~
+$bulletcaliber~
+God~
+God~
+#13105
+bullet $bulletcaliber0 $bullettype1 METAL~
+a $bulletcaliber0 $bullettype1 bullet~
+a $bulletcaliber0 $bullettype1 bullet lies here.~
+This is a simple freshly-molded bullet without a shell casing.  It is a $bulletcaliber and made of gold-steel alloy suitable for $bullettype.
+~
+12 37752832 1
+0 0 0 0
+1 0.000000
+0 0 0 0 0 0 0 1
+0.010000 0 0 0 0 0 0
+God~
+God~
+#13106
+case bullet casings assorted $plasticcolor $polyprop PLASTIC~
+a case of assorted bullet casings~
+A case of assorted bullet casings rests here.~
+   This is a simple $plasticcolor case of $polyprop. It is filled with various 
+bullet-casings of assorted sizes and types. 
+~
+30 33558528 1
+20 11103 1 0
+1000 0.000000
+0 0 0 0 0 0 0 1
+300.000000 0 0 0 0 0 0
+God~
+God~
+#13109
+press bullet large METAL~
+a large bullet press~
+A large bullet press stands on the floor.~
+   This large bullet press stands on a floor-mount, its powerful 
+mechanics able to precisely fit bullets with their casings 
+without discharging the volitile propellant. 
+~
+12 4128 0
+0 0 0 0
+15000 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13900
+bullet spent $bulletcaliber $brokenbullet METAL~
+a $brokenbullet1 $bulletcaliber0 bullet~
+A $brokenbullet1 $bulletcaliber0 bullet lies here.~
+   This is a simple metal bullet without a shell casing. It is a 
+$bulletcaliber, and made of an alloy of iron and gold. It is 
+$brokenbullet from use. 
+~
+40 37752832 1
+0 0 0 0
+2 0.000000
+0 0 0 0 0 0 0 1
+0.010000 0 0 0 0 0 0
+God~
+God~
+#13950
+casing pistol $bulletcaliber0 METAL~
+a $bulletcaliber0 pistol casing~
+A $bulletcaliber0 pistol casing lies here.~
+Made of a thin alloyed-steel, this is a $bulletcaliber pistol casing.
+~
+38 37752832 1
+0 0 0 0
+1 0.000000
+0 0 0 0 0 0 0 1
+0.010000 0 0 0 0 0 0
+God~
+God~
+#13951
+casing smg $bulletcaliber0 sub-machine gun METAL~
+a $bulletcaliber0 sub-machine gun casing~
+A $bulletcaliber0 sub-machine gun casing lies here.~
+   Made of a thin alloyed-steel, this is a $bulletcaliber 
+sub-machine gun casing. 
+~
+38 37752832 1
+0 0 0 0
+1 0.000000
+0 0 0 0 0 0 0 1
+0.010000 0 0 0 0 0 0
+God~
+God~
+#13952
+casing rifle $bulletcaliber0 METAL~
+a $bulletcaliber0  rifle casing~
+A $bulletcaliber0  rifle casing lies here.~
+Made of a thin alloyed-steel, this is a $bulletcaliber rifle casing.
+~
+38 37752832 1
+0 0 0 0
+1 0.000000
+0 0 0 0 0 0 0 1
+0.010000 0 0 0 0 0 0
+God~
+God~
+#13151
+magazine smg $clipsize0 $clipcaliber1 sub-machine gun clip PLASTIC~
+a $clipcaliber1 $clipsize0 sub-machine gun magazine~
+A $clipcaliber1 $clipsize0 sub-machine gun magazine lies here.~
+   This is a molded plastic gun clip for holding rounds of 
+sub-machine gun ammunition. It is $clipsize, designed for 
+$clipcaliber ammunition. 
+~
+37 33558528 1
+0 0 0 0
+20 0.000000
+0 0 1 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13152
+magazine rifle $clipsize0 $clipcaliber1 clip PLASTIC~
+a $clipcaliber1 $clipsize0 rifle magazine~
+A $clipcaliber1 $clipsize0 rifle magazine lies here.~
+   This is a molded plastic gun clip for holding rounds of rifle 
+ammunition. It is $clipsize, designed for $clipcaliber 
+ammunition. 
+~
+37 33558528 1
+0 0 0 0
+20 0.000000
+0 0 2 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13039
+holster handgun $color $dogleather TEXTILE~
+a $color, $dogleather handgun holster~
+A $color, $dogleather handgun holster lies here.~
+   This $color $dogleather holster looks ideally sized to hold 
+any sized pistol, handgun, or revolver. A variety of straps and 
+buckles on the holster allows one to size it to fit over the 
+shoulder, leg, or be clipped on to one's belt. 
+~
+46 33558528 8650785
+600 0 0 0
+50 0.000000
+0 0 0 0 0 0 0 1
+1.000000 0 0 0 0 0 0
+S
+112 10 10 10 1
+God~
+God~
+#13040
+bandolier $color $dogleather TEXTILE~
+a $color $dogleather bandolier~
+A $color $dogleather bandolier has been left here.~
+   This $color $dogleather bandolier is designed to be slung over 
+the shoulders to provide ready access to rounds for the soldier 
+of the move. It has easily enough space for a hundred rounds, 
+and the stitching and construct is plain and simple. 
+~
+49 33554432 8388609
+200 0 0 0
+50 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+S
+112 10 10 10 1
+S
+3 0 8 199 3
+God~
+God~
+#13041
+ammo-belt $color $dogleather TEXTILE~
+a $color $dogleather ammo-belt~
+A $color $dogleather ammo-belt lies coiled.~
+   This $color $dogleather, ammo-belt is designed to be worn 
+about the waist, and bears number of large pockets and flaps of 
+the same material that allows one to store magazines for firearms 
+in them. It has easily enough space for ten such magazine, and 
+the stitching and construct is plain and simple. 
+~
+48 33554432 2049
+10 1 0 0
+5 0.000000
+0 0 0 0 0 0 0 1
+10.000000 0 0 0 0 0 0
+S
+112 10 10 10 1
+God~
+God~
+#13042
+rifle boxy black praetor long barrel METAL BYTIAMAT~
+a boxy black rifle with a long barrel~
+A boxy black rifle with a long barrel lies here.~
+   This rifle is clearly a weapon of war; it is wanting in terms 
+of any kind of ornamentation or appearance, its body boxy and 
+bulky. It is made out of a durable iron alloy that is curiously 
+light for its size, and designed specifically to absorb and 
+dissipate heat. It comes equipped with rubber grips along the 
+long barrel and the handle, and a short stock. The clips are fed 
+in a small slot before the stock. The letters "PRAETOR-32" are 
+printed at the bottom of the handle to indicate its model. 
+~
+28 33558528 8921089
+0 0 8 12
+700 0.000000
+0 0 0 0 1000 131072 0 1
+400.000000 0 0 0 0 0 0
+A
+10012 0
+God~
+God~
+#13043
+holster ankle $color $dogleather TEXTILE~
+a $color, $dogleather ankle holster~
+A $color, $dogleather ankle holster lies here.~
+   This $color $dogleather holster looks sized to hold smaller, 
+more discreet pistols, handguns and revolvers, and as such, a 
+pair of strips allows one to size it to fit over the ankle. 
+~
+46 33558528 16777217
+400 0 0 0
+50 0.000000
+0 0 0 0 0 0 0 1
+2.000000 0 0 0 0 0 0
+S
+112 10 10 10 10
+S
+112 10 10 10 1
+S
+112 10 10 10 1
+God~
+God~
+#13104
+block 18-carat gold bulletmaking eighteen-carat carat alloy small METAL~
+a small block of eighteen-carat alloy~
+A small block of eighteen-carat alloy sits here.~
+   This is a small block of metal of a consistent volume, alloyed 
+to be eighteen carat gold. The metal contains a good deal of the 
+gold's softness despite the addition of steel to its blend, 
+making it ideal for hollow-tipped bullet manufacture. 
+~
+12 4194304 1
+0 0 0 0
+400 0.000000
+0 0 0 0 0 0 0 1
+40.000000 0 0 0 0 0 0
+V
+hollow-tipped~
+$bullettype~
+God~
+God~
+#13103
+block 12-carat gold bulletmaking twelve-carat carat alloy small METAL~
+a small block of twelve-carat alloy~
+A small block of twelve-carat alloy sits here.~
+   This is a small block of metal of a consistent volume, alloyed 
+to be twelve carat gold - half gold and half steel. The metal is 
+appreciably heavier than steel alone, giving it good stopping 
+power for a normal jacketed bullet. 
+~
+12 0 1
+0 0 0 0
+300 0.000000
+0 0 0 0 0 0 0 1
+30.000000 0 0 0 0 0 0
+V
+jacketed~
+$bullettype~
+God~
+God~
+#13044
+block 6-carat gold bulletmaking six-carat carat alloy small METAL~
+a small block of six-carat alloy~
+A small block of six-carat alloy sits here.~
+   This is a small block of metal of a consistent volume, alloyed 
+to be six carat gold - almost completely steel. The metal is 
+lighter than alloys with more of the heavy gold blend, but it 
+makes up for this by retaining the strength and rigidity of the 
+steel, making it ideal for armor-piercing bullets. 
+~
+12 0 1
+0 0 0 0
+200 0.000000
+0 0 0 0 0 0 0 1
+20.000000 0 0 0 0 0 0
+V
+armor-piercing~
+$bullettype~
+God~
+God~
+#13045
+bandolier bullet-belt $dogleather $color TEXTILE~
+a $dogleather1 $color0 bullet-belt~
+A $dogleather1 $color0 bullet-belt lies coiled in a heap.~
+   Made of $color $dogleather, this tanned bullet-belt is 
+designed with numerous loops meant to hold individual bullets. 
+It looks to be able to hold about one hundred. 
+~
+49 33554432 2049
+100 0 0 0
+200 0.000000
+0 0 0 0 0 0 0 1
+0.000000 0 0 0 0 0 0
+God~
+God~
+#13294
+UNFINIISHED rifle $rifleframe1 $riflebarrel2 gun METAL~
+a $riflebarrel2, $metalcolor7 $riflecaliber3 $rifleframe1~
+A $riflebarrel2, $metalcolor7 $riflecaliber3 $rifleframe1 lies here.~
+   Made of $ironalloy, this is $rifleframe, with $riflebarrel. 
+It is good quality, with $rifelgrip made of $polyprop. 
+$metalcolor 
+~
+28 33558528 8921089
+0 0 0 12
+700 0.000000
+0 0 0 0 1000 131072 0 1
+400.000000 0 0 0 0 0 0
+A
+10000 0
+A
+10012 0
+God~
+God~
+#13046
+handgun $pistfolrame0 $pistolbarrel3 $pistolcaliber4 $plasticcolor1 polymer gun PLASTIC~
+a $pistolbarrel3, $plasticcolor1 polymer $pistolcaliber4 $pistolframe0~
+A $pistolbarrel3, $plasticcolor1 polymer $pistolcaliber4 $pistolframe0 is here.~
+   The exterior frame of this handgun, $pistolframe, has been fashioned from a 
+$plasticcolor polymer comprimised from $soliplast. The interior of the 
+handgun, as well as the inside of the $pistolbarrel $pistolcaliber barrel, have 
+been forged from $ironalloy-alloy. It has $pistolgrip, made from the same 
+polymer as the frame but of $color hue. Small plastic panels can be slid up 
+and down on the grip, revealing an array of plugs and circuity, and on the back 
+of the handgun is a small LED display. 
+~
+28 33619968 8193
+2 41 0 11
+400 0.000000
+0 0 -2 0 1200 262144 0 1
+1600.000000 0 0 0 0 0 0
+A
+10011 5
+God~
+God~
+#13047
+rifle $rifleframe0 $riflebarrel3 $riflecaliber4 $plasticcolor1 gun PLASTIC~
+a $riflebarrel3, $plasticcolor1 polymer $riflecaliber4 $rifleframe0~
+A $riflebarrel3, $plasticcolor1 polymer $riflecaliber4 $rifleframe0 is here~
+   The exterior frame of this firearm, $rifleframe, has been fashioned from a 
+$plasticcolor polymer comprimised from $soliplast. The interior of the rifle, 
+as well as the inside of the $riflebarrel $pistolcaliber barrel, have been 
+forged from $ironalloy-alloy. It has $riflegrip, made from the same polymer as 
+the frame but of $color hue. Small plastic panels can be slid up and down 
+along the stock, revealing an array of plugs and circuity, and on the back of 
+the handgun is a small LED display. 
+~
+28 33619968 8921089
+1 41 0 12
+700 0.000000
+0 0 -2 0 1200 262144 0 1
+1600.000000 0 0 0 0 0 0
+A
+10012 5
+God~
+God~
+#13048
+SMG $smgframe0 $smgbarrel3 $smgcaliber4 $plasticcolor1 gun PLASTIC~
+a $smgbarrel3, $plasticcolor1 polymer $smgcaliber4 $smgframe0~
+A $smgbarrel3, $plasticcolor1 polymer $smgcaliber4 $smgframe0 is here~
+   The exterior frame of this machine-gun, $smgframe, have been fashioned from 
+a $plasticcolor polymer comprimised from $soliplast. The interior of the 
+machine-gun, as well as the inside of the $smgbarrel $pistolcaliber barrel, 
+have been forged from $ironalloy-alloy. It has $smggrip, made from the same 
+polymer as the frame but of $color hue. Small plastic panels can be slid up 
+and down along the stock, revealing an array of plugs and circuity, and on the 
+back of the handgun is a small LED display. 
+~
+28 33619968 8193
+0 47 0 13
+900 0.000000
+0 0 -2 0 1200 262144 0 1
+1600.000000 0 0 0 0 0 0
+A
+10013 5
+God~
+God~
+#13049
+rifle sling $color $dogleather TEXTILE~
+a $color, $dogleatehr rifle sling~
+A $color, $dogleather rifle sling has been left here.~
+   This is a very simple $color $dogleather sling that looks perfect to throw 
+over a shoulder. It comes with clips and fastenins that let it be attached to 
+just about any sort of rifle, allowing someone to easily carry such a weapon. 
+~
+46 33554432 8912897
+2000 2 0 0
+100 0.000000
+0 0 0 0 0 0 0 1
+1.000000 0 0 0 0 0 0
+God~
+God~
 $~

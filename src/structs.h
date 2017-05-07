@@ -3463,7 +3463,7 @@ struct race_data
     int group_noun;
     int tracks;
     int corpse;
-    int type;
+    int race_type;
     int door_bits;
     int bot_bits;
     int nomad;
