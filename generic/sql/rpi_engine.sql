@@ -1612,7 +1612,7 @@ CREATE TABLE `races` (
   `group_noun` smallint(6) default '0',
   `tracks` smallint(6) default '0',
   `corpse` smallint(6) default '0',
-  `race_type` smallint(6) default '0',
+  `type` smallint(6) default '0',
   `door_bits` smallint(6) default '0',
   `bot` smallint(6) default '0',
   `nomad` smallint(6) default '0',

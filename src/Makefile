@@ -30,7 +30,7 @@ turf.o traps.o electronic.o variables.o firearms.o BroadwaveClient.o
 
 HEADERS = \
 account.h clan.h constants.h decl.h group.h net_link.h \
-object_damage.h protos.h server.h structs.h trigram.h utils.h  BroadwaveClient.h
+object_damage.h protos.h server.h structs.h trigram.h utils.h BroadwaveClient.h
 
 # default target
 ../bin/server: $(OBJS)
