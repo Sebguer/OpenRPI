@@ -1,4 +1,4 @@
-* Read the licenses. Don't like them, don't run the MUD. *
+* Read the licenses. Don't like them, don't run the MUD.
 
 
 # Installation
