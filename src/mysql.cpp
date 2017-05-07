@@ -1161,7 +1161,7 @@ char *
 		else if (which_var == RACE_CORPSE)
 			looked_up = entry->corpse;
 		else if (which_var == RACE_TYPE)
-			looked_up = entry->type;
+			looked_up = entry->race_type;
 		else if (which_var == RACE_DOOR_BITS)
 			looked_up = entry->door_bits;
 		else if (which_var == RACE_BOT_BITS)
