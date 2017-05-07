@@ -33,6 +33,7 @@ Replacing bp with the appropriate type of port (pp, bp, or tp).
 * ./crashes is where one-half of the crash-logs are kept. ./lib is the other. Someone broke gdb-parsing of crash-logs a while back: you're going to try and fix that ASAP unless you want even more mysterious crashes.
 * ./bin is where the executable is stored.
 * ./tmp is where output from the server is kept.
+* ./utils has a bunch of random files- right now primarily Kithrater's janky PHP forms for manipulating helpfiles and races.
 
 * ./lib/text is a variety of texts people see when navigating through the menus of the MUD.
 * ./regions/registry is where all the skill formulas are kept.
