@@ -12,6 +12,6 @@ world_log_db = "rpi_world_log";
 
 server_mode = "play";
 server_port = "4500";
-server_path_play = "/home/ARPI/pp/";
-server_path_build = "/home/ARPI/bp/";
-server_path_test = "/home/ARPI/tp/";
+server_path_play = "/home/ORPI/pp/";
+server_path_build = "/home/ORPI/bp/";
+server_path_test = "/home/ORPI/tp/";
