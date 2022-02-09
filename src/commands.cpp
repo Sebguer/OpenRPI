@@ -1405,7 +1405,7 @@ int is_number2( const char * str, int def )
 	if ( !( ss >> value ) )
 		value = def;
 
-	delete ss;
+	//delete ss;
 
 	return value;
 }

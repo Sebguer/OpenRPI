@@ -5,7 +5,7 @@ CC=g++ -Wno-write-strings
 
 # SVN_VERS = -D'SVN_REV="$(shell svnversion -n engine/. && touch comm.cpp)"'
 # CFLAGS = $(SVN_VERS) -ggdb -DLINUX -Wall
-CFLAGS = -ggdb -DLINUX -Wall -w
+CFLAGS = -ggdb -DLINUX -Wall -w -fpermissive
 LFLAGS = -lm -lmysqlclient -lcrypt -lnsl
 
 INSTALL_DIR = ..
