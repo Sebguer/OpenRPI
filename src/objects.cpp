@@ -8602,7 +8602,7 @@ void do_empty (CHAR_DATA * ch, char *argument, int cmd)
             act("You finish emptying $p.", false, ch, container, 0, TO_CHAR);
             act("$n finishes emptying $p.", true, ch, container, 0, TO_ROOM);
         } else {
-            if (!spare_capacity(ch, container, false))
+            if (!spare_capacity(ch, obj, false))
             {
                 send_to_char("This area is too small and already too full to contain that item.\n", ch);
                 return;
