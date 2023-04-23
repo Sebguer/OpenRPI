@@ -18,6 +18,9 @@
 #include <mysql/mysql.h>
 #include <dirent.h>
 #include <signal.h>
+#include <vector>  
+#include <iterator>
+
 
 #include "server.h"
 
@@ -28,8 +31,6 @@
 #include "utils.h"
 #include "utility.h"
 #include "decl.h"
-#include <vector>  
-#include <iterator>
 
 
 extern RACE_TABLE_ENTRY *entry;
