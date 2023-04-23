@@ -19,7 +19,7 @@
 #include <sys/stat.h>
 #include <mysql/mysql.h>
 #include <limits.h>
-#include <std::vector>
+#include <vector>
 #include <iterator> 
 
 #include "server.h"
