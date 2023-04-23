@@ -11,6 +11,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <vector> 
 
 #include "server.h"
 #include "structs.h"
@@ -487,7 +488,7 @@ void Neighbourhood::rewardHood(void)
 
 	TurfSystem *thisSystem = NULL;
 
-	vector<TurfSystem*>::iterator it;
+	std::vector<TurfSystem*>::iterator it;
 	for (it = TurfSystems.begin(); it != TurfSystems.end(); it++)
 	{
 		if ((*it)->systemId == this->systemId)
@@ -733,7 +734,7 @@ void turf_update (void)
 
 		std::string world_log_db = engine.get_config ("world_log_db");	
 		char buf[MAX_STRING_LENGTH] = {'\0'};	
-		vector<Neighbourhood*>::iterator it;
+		std::vector<Neighbourhood*>::iterator it;
 		for (it = Neighbourhoods.begin(); it != Neighbourhoods.end(); it++)
 		{
 			if (true_hour == 0)
@@ -745,7 +746,7 @@ void turf_update (void)
 
 				if (first_hood)
 				{						
-					for	(vector<TurfSystem*>::iterator nit = TurfSystems.begin(); nit != TurfSystems.end(); nit++)
+					for	(std::vector<TurfSystem*>::iterator nit = TurfSystems.begin(); nit != TurfSystems.end(); nit++)
 					{
 						if (vtoo((*nit)->boardVnum))
 							(*nit)->turnReport();
@@ -766,7 +767,7 @@ void turf_update (void)
 			
 			if (second_hood)
 			{
-				for	(vector<TurfSystem*>::iterator nit = TurfSystems.begin(); nit != TurfSystems.end(); nit++)
+				for	(std::vector<TurfSystem*>::iterator nit = TurfSystems.begin(); nit != TurfSystems.end(); nit++)
 				{
 					if (vtoo((*nit)->boardVnum))
 						(*nit)->beatReport();
@@ -795,7 +796,7 @@ void turf_update (void)
 
 std::string Block::clanName (int systemId, int clan)
 {
-	vector<TurfSystem*>::iterator it;
+	std::vector<TurfSystem*>::iterator it;
 
 	for (it = TurfSystems.begin(); it != TurfSystems.end(); it++)
 	{
@@ -1031,7 +1032,7 @@ void do_setturf (CHAR_DATA * ch, char *argument, int cmd)
 	newBlock->scores[newBlock->blockLoyalty][FEAR] = atoi(fearArg.c_str());
 	newBlock->blockType = atoi(typeArg.c_str());
 
-	vector<Neighbourhood*>::iterator it;
+	std::vector<Neighbourhood*>::iterator it;
 	for (it = Neighbourhoods.begin(); it != Neighbourhoods.end(); it++)
 	{
 		if ((*it)->hoodId == newBlock->turfHood)
@@ -1050,7 +1051,7 @@ void do_setturf (CHAR_DATA * ch, char *argument, int cmd)
 
 int Block::clanPosition(char *clanName, int systemId)
 {
-	vector<TurfSystem*>::iterator it;
+	std::vector<TurfSystem*>::iterator it;
 	for (it = TurfSystems.begin(); it != TurfSystems.end(); it++)
 	{
 		if (systemId == (*it)->systemId)
@@ -1117,7 +1118,7 @@ void do_turf (CHAR_DATA * ch, char *argument, int cmd)
 
 	TurfSystem *thisSystem = NULL;
 
-	vector<TurfSystem*>::iterator it;
+	std::vector<TurfSystem*>::iterator it;
 	for (it = TurfSystems.begin(); it != TurfSystems.end(); it++)
 	{
 		if ((*it)->systemId == thisHood->systemId)
@@ -1830,7 +1831,7 @@ void
 
 	TurfSystem *thisSystem = NULL;
 
-	vector<TurfSystem*>::iterator it;
+	std::vector<TurfSystem*>::iterator it;
 	for (it = TurfSystems.begin(); it != TurfSystems.end(); it++)
 	{
 		if ((*it)->systemId == thisHood->systemId)
@@ -2170,7 +2171,7 @@ void Neighbourhood::loadEnforcers(CHAR_DATA *ch, CHAR_DATA *target)
 
 	// First we get our Block and our Neighbourhood.
 
-	vector<TurfSystem*>::iterator it;
+	std::vector<TurfSystem*>::iterator it;
 	for (it = TurfSystems.begin(); it != TurfSystems.end(); it++)
 	{
 		if ((*it)->systemId == systemId)
@@ -2278,7 +2279,7 @@ void Neighbourhood::reportIncident(CHAR_DATA *ch, CHAR_DATA *target, int crime)
 
 	TurfSystem *thisSystem = NULL;
 
-	vector<TurfSystem*>::iterator it;
+	std::vector<TurfSystem*>::iterator it;
 	for (it = TurfSystems.begin(); it != TurfSystems.end(); it++)
 	{
 		if ((*it)->systemId == systemId)
@@ -2392,7 +2393,7 @@ void TurfSystem::beatReport (void)
 	std::string output;
 	OBJ_DATA *board = NULL;
 
-	vector<Neighbourhood*>::iterator it;
+	std::vector<Neighbourhood*>::iterator it;
 	std::map<int, Block>::iterator nit;
 	bool anyworthwhile = false;
 
@@ -2497,7 +2498,7 @@ void TurfSystem::turnReport (void)
 	int fear[TURF_CLANS] = {0, 0, 0, 0, 0};
 	int blockCount[TURF_CLANS] = {0, 0, 0, 0, 0};
 
-	vector<Neighbourhood*>::iterator it;
+	std::vector<Neighbourhood*>::iterator it;
 	std::map<int, Block>::iterator nit;
 	for (it = Neighbourhoods.begin(); it != Neighbourhoods.end(); it++)
 	{
@@ -2618,7 +2619,7 @@ int is_turf_clan (char *clan_name, bool include_willies)
 
 	TurfSystem *thisSystem = NULL;
 
-	vector<TurfSystem*>::iterator it;
+	std::vector<TurfSystem*>::iterator it;
 	for (it = TurfSystems.begin(); it != TurfSystems.end(); it++)
 	{
 		if ((*it)->systemId == 0)
@@ -2671,7 +2672,7 @@ void do_immturf(CHAR_DATA *ch, char* argument, int cmd)
             
 		    TurfSystem *thisSystem = NULL;
 
-            vector<TurfSystem*>::iterator it;
+            std::vector<TurfSystem*>::iterator it;
 		    for (it = TurfSystems.begin(); it != TurfSystems.end(); it++)
 		    {
 			    if ((*it)->systemId == number)
@@ -2709,7 +2710,7 @@ void do_immturf(CHAR_DATA *ch, char* argument, int cmd)
 		    
 		    Neighbourhood *thisHood = NULL;
 
-		    vector<Neighbourhood*>::iterator nit;
+		    std::vector<Neighbourhood*>::iterator nit;
 		    for (nit = Neighbourhoods.begin(); nit != Neighbourhoods.end(); nit++)
 		    {
 			    if ((*nit)->systemId == number)
@@ -2738,7 +2739,7 @@ void do_immturf(CHAR_DATA *ch, char* argument, int cmd)
         
 		Neighbourhood *thisHood = NULL;
 
-		vector<Neighbourhood*>::iterator it;
+		std::vector<Neighbourhood*>::iterator it;
 		for (it = Neighbourhoods.begin(); it != Neighbourhoods.end(); it++)
 		{
 			if ((*it)->hoodId == number)
@@ -2756,7 +2757,7 @@ void do_immturf(CHAR_DATA *ch, char* argument, int cmd)
 
 		TurfSystem *thisSystem;		
 
-		vector<TurfSystem*>::iterator nit;
+		std::vector<TurfSystem*>::iterator nit;
 		for (nit = TurfSystems.begin(); nit != TurfSystems.end(); nit++)
 		{
 			if ((*nit)->systemId == thisHood->systemId)
@@ -2823,7 +2824,7 @@ void do_immturf(CHAR_DATA *ch, char* argument, int cmd)
 
 		TurfSystem *thisSystem;		
 
-		vector<TurfSystem*>::iterator nit;
+		std::vector<TurfSystem*>::iterator nit;
 		for (nit = TurfSystems.begin(); nit != TurfSystems.end(); nit++)
 		{
 			if ((*nit)->systemId == ch->room->hood->systemId)
@@ -2876,7 +2877,7 @@ void do_immturf(CHAR_DATA *ch, char* argument, int cmd)
         number -= 1;
 		Neighbourhood *thisHood = NULL;
 
-		vector<Neighbourhood*>::iterator it;
+		std::vector<Neighbourhood*>::iterator it;
 		for (it = Neighbourhoods.begin(); it != Neighbourhoods.end(); it++)
 		{
 			if ((*it)->hoodId == number)

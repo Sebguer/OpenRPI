@@ -411,8 +411,6 @@ const struct command_data commands[] =
     {"\\", do_ichat, DEAD, C_DOA | C_DEL | C_HID},
     {"ichat", do_ichat, DEAD, C_DOA | C_DEL | C_HID},
     {"wiznet", do_ichat, DEAD, C_DOA | C_DEL | C_HID},
-    {"broadwave", do_broadwave, DEAD, C_DOA | C_DEL | C_HID},
-    {"bwave", do_broadwave, DEAD, C_DOA | C_DEL | C_HID},
     {"wizlist", do_wizlist, DEAD,
      C_DEL | C_HID | C_SUB | C_DOA | C_BLD | C_PAR
     },

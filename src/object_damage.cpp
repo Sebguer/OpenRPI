@@ -344,7 +344,7 @@ object_damage__get_sdesc (OBJECT_DAMAGE * thisPtr)
 {
 	ushort n_sdesc_length = 0;
 	char *str_sdesc = NULL;
-	extern const char *damage_name[8][8][4];
+	extern const char *damage_name[11][8][4];
 
 	//if (thisPtr->source == DAMAGE_PERMANENT)
 	//	return NULL;
@@ -411,7 +411,7 @@ npc_repair (CHAR_DATA * ch, CHAR_DATA * mob, OBJ_DATA *obj, char *argument)
 	char buf3[MAX_STRING_LENGTH];
 	int small = false;
 	float cost = 0;
-	extern const char *damage_name[8][8][4];
+	extern const char *damage_name[11][8][4];
 
 	if (!mob || !IS_SET (mob->act, ACT_FIXER))
 	{
@@ -707,7 +707,7 @@ void do_mend ( CHAR_DATA * ch, char *argument, int cmd)
 	bool is_robot = !str_cmp( lookup_race_variable( ch->race, RACE_NAME ), "robot" );
 
 	extern const char *damage_severity[DAMAGE_SEVERITY_MAX + 1];
-	extern const char *damage_name[8][8][4];
+	extern const char *damage_name[11][8][4];
 
 	bool general = false;
 

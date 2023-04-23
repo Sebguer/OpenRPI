@@ -36,7 +36,6 @@
 #include "decl.h"
 #include "group.h"
 #include "room.h"
-#include "BroadwaveClient.h"
 
 
 extern int errno;		///< Global error number
@@ -446,9 +445,7 @@ game_loop (int s)
             knockout = 0;
         }
 
-        //Broadwave.listenBroadwave();
 
-        /* process_commands; */
 
         for (point = descriptor_list; point; point = next_to_process)
         {

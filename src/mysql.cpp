@@ -11,6 +11,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <vector>  
+#include <iterator>
 #include <stdlib.h>
 #include <unistd.h>
 #include <ctype.h>
@@ -18,6 +20,8 @@
 #include <mysql/mysql.h>
 #include <dirent.h>
 #include <signal.h>
+
+
 
 #include "server.h"
 
@@ -28,6 +32,7 @@
 #include "utils.h"
 #include "utility.h"
 #include "decl.h"
+
 
 extern RACE_TABLE_ENTRY *entry;
 
@@ -223,7 +228,7 @@ void save_foraged_goods (void)
 		return;
 
 	mysql_safe_query ("DELETE FROM foraged");
-	vector<foraged_good*>::iterator it;
+	std::vector<foraged_good*>::iterator it;
 	for (it = foraged_goods_list.begin(); it != foraged_goods_list.end(); it++)
 	{
 		mysql_safe_query ("INSERT INTO foraged (vnum, sector, rarity) VALUES('%d', '%d', '%d')", (*it)->vnum, (*it)->sector, (*it)->rarity);
@@ -296,7 +301,7 @@ void save_foraged_zones (void)
 		return;
 
 	mysql_safe_query ("DELETE FROM f_zone");
-	vector<foraged_zone*>::iterator it;
+	std::vector<foraged_zone*>::iterator it;
 	for (it = foraged_zones_list.begin(); it != foraged_zones_list.end(); it++)
 	{
 		mysql_safe_query ("INSERT INTO f_zone (zone, type, count, vc_thresh, c_thresh, uc_thresh, r_thresh, vr_thresh) VALUES('%d', '%d', '%d', '%d', '%d', '%d', '%d', '%d')",
@@ -340,7 +345,7 @@ void save_defined_scents (void)
 		return;
 
 	mysql_safe_query ("DELETE FROM scents");
-	vector<defined_scent*>::iterator it;
+	std::vector<defined_scent*>::iterator it;
 	for (it = defined_scent_list.begin(); it != defined_scent_list.end(); it++)
 	{
 		mysql_safe_query ("INSERT INTO scents (id, name) VALUES('%d', '%s')", (*it)->id, (*it)->name);

@@ -14,6 +14,9 @@
 #include <stdlib.h>
 #include <math.h>
 #include <ctype.h>
+#include <fstream>  
+#include <vector>
+#include <iterator>
 
 #include "server.h"
 #include "structs.h"
@@ -2670,7 +2673,7 @@ void
 	char buffer[MAX_STRING_LENGTH];
 	OBJ_DATA *tobj, *obj;
 
-	if (!cmd && !spare_capacity(ch, false, true))
+	if (!cmd && !spare_capacity(ch, obj, true))
 	{
 		send_to_char("This area is too small and already too full to contain the items you are holding.\n", ch);
 		return;
@@ -3640,7 +3643,7 @@ void
 	third_person.append("#0");
 
 	bool tasted;
-	std:string taste;
+	std::string taste;
 
 	if (drink->ink_color && str_cmp(drink->ink_color, "(null)"))
 	{
@@ -3756,7 +3759,7 @@ void
 	third_person.append("#0");
 
 	bool tasted;
-	std:string taste;
+	std::string taste;
 
 	if (drink->ink_color && str_cmp(drink->ink_color, "(null)"))
 	{
@@ -7598,7 +7601,7 @@ void
 
 				j = 1;
 
-				vector<foraged_good*>::iterator it;
+				std::vector<foraged_good*>::iterator it;
 				for (it = foraged_goods_list.begin(); it != foraged_goods_list.end(); it++)
 				{
 					if ((*it)->sector != sector_type)
@@ -10494,7 +10497,7 @@ void
 		}
 	}
 
-	vector<foraged_good*>::iterator it;
+	std::vector<foraged_good*>::iterator it;
 	char forage_buf[MAX_STRING_LENGTH] = { '\0' };
 	for (it = foraged_goods_list.begin(); it != foraged_goods_list.end(); it++)
 	{
