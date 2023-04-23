@@ -14,6 +14,9 @@
 #include <stdlib.h>
 #include <math.h>
 #include <ctype.h>
+#include <fstream>  
+#include <vector>
+#include <iterator>
 
 #include "server.h"
 #include "structs.h"
