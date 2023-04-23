@@ -2670,7 +2670,7 @@ void
 	char buffer[MAX_STRING_LENGTH];
 	OBJ_DATA *tobj, *obj;
 
-	if (!cmd && !spare_capacity(ch, false, true))
+	if (!cmd && !spare_capacity(ch, obj, true))
 	{
 		send_to_char("This area is too small and already too full to contain the items you are holding.\n", ch);
 		return;
