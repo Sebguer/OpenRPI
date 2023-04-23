@@ -4090,8 +4090,8 @@ void objstat( CHAR_DATA * ch, char *name ) {
 		send_to_char( buf, ch );
 	}
 
-	if ( j->obj_flags.bitstd::vector ) {
-		sprintf( buf, "#2Bitstd::vector:#0   " );
+	if ( j->obj_flags.bitvector ) {
+		sprintf( buf, "#2Bitvector:#0   " );
 		for ( i = 0; ( *affected_bits[ i ] != '\n' ); i++ )
 			if ( IS_SET (j->obj_flags.bitvector, (1 << i)) )
 				sprintf( buf + strlen( buf ), "%s ", affected_bits[ i ] );
