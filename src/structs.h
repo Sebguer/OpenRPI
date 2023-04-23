@@ -35,6 +35,18 @@
 #include <sys/types.h>
 #include <sys/time.h>
 #include "constants.h"
+#include <string>  
+#include <list>  
+#include <map>  
+#include <set>  
+#include <vector>  
+#include <stdexcept>  
+#include <fstream>  
+#include <iostream>  
+#include <sstream>  
+#include <ios>  
+#include <iterator>
+#include <algorithm>
 
 #include "object_damage.h"
 
