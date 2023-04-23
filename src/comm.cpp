@@ -36,7 +36,6 @@
 #include "decl.h"
 #include "group.h"
 #include "room.h"
-#include "BroadwaveClient.h"
 
 
 extern int errno;		///< Global error number

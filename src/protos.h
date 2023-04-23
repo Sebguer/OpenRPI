@@ -28,6 +28,26 @@
 
 #include <string>
 #include <stdio.h>
+#include <fcntl.h>  
+#include <signal.h>
+#include <time.h>
+#include <errno.h> 
+#include <ctime>
+#include <cstdlib>
+
+#include <string>  
+#include <list>  
+#include <map>  
+#include <set>  
+#include <vector>  
+#include <stdexcept>  
+#include <fstream>  
+#include <iostream>  
+#include <sstream>  
+#include <ios>  
+#include <iterator>
+#include <algorithm>
+
 
 #ifndef MACOSX
 #include <malloc.h>
@@ -37,7 +57,6 @@
 #include <mysql/mysql.h>
 
 #include "clan.h"
-#include "BroadwaveClient.h"
 
 #ifndef uint16
 typedef unsigned short uint16;

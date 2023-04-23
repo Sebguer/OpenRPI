@@ -37,7 +37,6 @@
 #include "constants.h"
 
 #include "object_damage.h"
-#include "BroadwaveClient.h"
 
 typedef struct scent_data SCENT_DATA;
 typedef struct trap_data TRAP_DATA;
