@@ -16,6 +16,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <unistd.h>
+#include <vector> 
+#include <iterator>
 
 #include "structs.h"
 #include "net_link.h"
@@ -44,7 +46,7 @@ const char *scent_tier[11] = {
 char *
 scent_lookup (int scent_ref)
 {
-    vector<defined_scent*>::iterator it;
+    std::vector<defined_scent*>::iterator it;
     for (it = defined_scent_list.begin(); it != defined_scent_list.end(); it++)
     {
         if ((*it)->id == scent_ref)
@@ -59,7 +61,7 @@ scent_lookup (int scent_ref)
 int
 scent_lookup (char *scent_name)
 {
-    vector<defined_scent*>::iterator it;
+    std::vector<defined_scent*>::iterator it;
     for (it = defined_scent_list.begin(); it != defined_scent_list.end(); it++)
     {
         if (!str_cmp((*it)->name, scent_name))
