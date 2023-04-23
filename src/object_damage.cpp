@@ -707,7 +707,7 @@ void do_mend ( CHAR_DATA * ch, char *argument, int cmd)
 	bool is_robot = !str_cmp( lookup_race_variable( ch->race, RACE_NAME ), "robot" );
 
 	extern const char *damage_severity[DAMAGE_SEVERITY_MAX + 1];
-	extern const char *damage_name[8][8][4];
+	extern const char *damage_name[11][8][4];
 
 	bool general = false;
 
