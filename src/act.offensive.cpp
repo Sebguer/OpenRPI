@@ -365,6 +365,7 @@ do_throw (CHAR_DATA * ch, char *argument, int cmd)
 			*/
         }
 
+/*         
         if (!tch)
         {
 
@@ -402,7 +403,8 @@ do_throw (CHAR_DATA * ch, char *argument, int cmd)
 
             return;
         }
-    }//if (!tch && dir != -1)
+    }//if (!tch && dir != -1) 
+    */
 
     if (tch)
     {

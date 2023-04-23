@@ -5241,7 +5241,7 @@ setup_registry (void)
     add_registry (REG_SKILLS, SKILL_RIFLE, "Rifle");
     add_registry (REG_SKILLS, SKILL_SMG, "Machinegun");
     add_registry (REG_SKILLS, SKILL_GUNNERY, "Gunnery");
-    add_registry (REG_SKILLS, SKILL_EXPLOSIVES, "Explosives");
+    add_registry (REG_SKILLS, SKILL_ARCHERY, "Archery");
 
     add_registry (REG_SKILLS, SKILL_SNEAK, "Sneak");
     add_registry (REG_SKILLS, SKILL_HIDE, "Hide");
