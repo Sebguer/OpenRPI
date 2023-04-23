@@ -28,6 +28,9 @@
 #include "utils.h"
 #include "utility.h"
 #include "decl.h"
+#include <vector>  
+#include <iterator>
+
 
 extern RACE_TABLE_ENTRY *entry;
 
