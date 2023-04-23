@@ -1568,7 +1568,7 @@ struct written_descr_data	/* for descriptions written in languages */
 
 struct obj_flag_data
 {
-    byte type_flag;
+    rpi_byte type_flag;
     bitflag wear_flags;
     int extra_flags;
     int extra_flags2;
