@@ -58,7 +58,7 @@
 /* Misc defines */
 
 #define OOC_LOUNGE			121
-#define MUSEUM_FOYER			120
+#define MUSEUM_FOYER		120
 #define AMPITHEATRE			70
 
 #define JUNKYARD			75
