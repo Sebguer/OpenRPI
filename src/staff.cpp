@@ -19,7 +19,7 @@
 #include <sys/stat.h>
 #include <mysql/mysql.h>
 #include <limits.h>
-#include <vector>
+#include <std::vector>
 #include <iterator> 
 
 #include "server.h"
@@ -4090,10 +4090,10 @@ void objstat( CHAR_DATA * ch, char *name ) {
 		send_to_char( buf, ch );
 	}
 
-	if ( j->obj_flags.bitvector ) {
-		sprintf( buf, "#2Bitvector:#0   " );
+	if ( j->obj_flags.bitstd::vector ) {
+		sprintf( buf, "#2Bitstd::vector:#0   " );
 		for ( i = 0; ( *affected_bits[ i ] != '\n' ); i++ )
-			if ( IS_SET (j->obj_flags.bitvector, (1 << i)) )
+			if ( IS_SET (j->obj_flags.bitstd::vector, (1 << i)) )
 				sprintf( buf + strlen( buf ), "%s ", affected_bits[ i ] );
 		strcat( buf, "\n" );
 		send_to_char( buf, ch );
@@ -11534,7 +11534,7 @@ int foraged_all( int sector ) {
 	if ( sector < 0 )
 		return 0;
 
-	vector< foraged_good* >::iterator it;
+	std::vector< foraged_good* >::iterator it;
 	for ( it = foraged_goods_list.begin(); it != foraged_goods_list.end(); it++ ) {
 		if ( ( *it )->sector == sector )
 			i++;
@@ -11554,7 +11554,7 @@ int foraged_count( int sector, int rarity ) {
 	if ( rarity < 0 || rarity > 4 )
 		return 0;
 
-	vector< foraged_good* >::iterator it;
+	std::vector< foraged_good* >::iterator it;
 	for ( it = foraged_goods_list.begin(); it != foraged_goods_list.end(); it++ ) {
 		if ( ( *it )->sector == sector && ( *it )->rarity == rarity )
 			i++;
@@ -11578,7 +11578,7 @@ int foraged_object( int sector, int rarity, int pos ) {
 	if ( ( i = foraged_count( sector, rarity ) ) == 0 )
 		return 0;
 
-	vector< foraged_good* >::iterator it;
+	std::vector< foraged_good* >::iterator it;
 	for ( it = foraged_goods_list.begin(); it != foraged_goods_list.end(); it++ ) {
 		if ( ( *it )->sector == sector && ( *it )->rarity == rarity ) {
 			j++;
@@ -11631,7 +11631,7 @@ void do_flist( CHAR_DATA *ch, char *argument, int cmd ) {
 			output.append(
 					"#2+------------+----+----+--------+-------------------------------------------------------------+#0\n" );
 
-			vector< foraged_good* >::iterator it;
+			std::vector< foraged_good* >::iterator it;
 			for ( it = foraged_goods_list.begin(); it != foraged_goods_list.end(); it++ ) {
 				if ( ( *it )->sector != sector )
 					continue;
@@ -11708,7 +11708,7 @@ void do_flist( CHAR_DATA *ch, char *argument, int cmd ) {
 		} else if ( zone > 99 || zone < 0 ) {
 			output += "\nYou must select a zone between 0 and 99";
 		} else if ( argTwo == "reset" ) {
-			vector< foraged_zone* >::iterator it;
+			std::vector< foraged_zone* >::iterator it;
 			for ( it = foraged_zones_list.begin(); it != foraged_zones_list.end(); it++ ) {
 				if ( ( *it )->zone == zone ) {
 					( *it )->count = ( atoi( argFour.c_str() ) ? atoi( argFour.c_str() ) : 0);
@@ -11717,7 +11717,7 @@ void do_flist( CHAR_DATA *ch, char *argument, int cmd ) {
 				}
 			}
 		} else if ( argTwo == "clear" ) {
-			vector< foraged_zone* >::iterator it;
+			std::vector< foraged_zone* >::iterator it;
 			for ( it = foraged_zones_list.begin(); it != foraged_zones_list.end(); it++ ) {
 				if ( ( *it )->zone == zone ) {
 					foraged_zones_list.erase( it );
@@ -11739,7 +11739,7 @@ void do_flist( CHAR_DATA *ch, char *argument, int cmd ) {
 				|| !( vnum = atoi( strArgument.c_str() ) ) ) {
 			output += "\nThat's not an object.\n";
 		} else {
-			vector< foraged_good* >::iterator it;
+			std::vector< foraged_good* >::iterator it;
 			for ( it = foraged_goods_list.begin(); it != foraged_goods_list.end(); it++ ) {
 				if ( ( *it )->sector == sector ) {
 					if ( ( *it )->rarity == rarity ) {
@@ -11799,7 +11799,7 @@ void do_scents( CHAR_DATA *ch, char *argument, int cmd ) {
 		output.append( "#2|  ID  |             Description             |#0\n" );
 		output.append( "#2+------+-------------------------------------+#0\n" );
 
-		vector< defined_scent* >::iterator it;
+		std::vector< defined_scent* >::iterator it;
 		for ( it = defined_scent_list.begin(); it != defined_scent_list.end(); it++ ) {
 			output.append( "#2| #0" );
 
@@ -11832,7 +11832,7 @@ void do_scents( CHAR_DATA *ch, char *argument, int cmd ) {
 		if ( strArgument.empty() ) {
 			output += "\nYou need to enter a name for your scent.\n";
 		} else {
-			vector< defined_scent* >::iterator it;
+			std::vector< defined_scent* >::iterator it;
 			for ( it = defined_scent_list.begin(); it != defined_scent_list.end(); it++ ) {
 				count = MAX( ( *it )->id, count );
 				if ( !str_cmp( ( *it )->name, strArgument.c_str() ) ) {
