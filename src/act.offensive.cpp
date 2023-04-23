@@ -172,7 +172,6 @@ notify_guardians (CHAR_DATA * ch, CHAR_DATA * tch, int cmd)
     }
     buf[11] = toupper (buf[11]);
     send_to_guardians (buf, flag);
-
 }
 
 void
