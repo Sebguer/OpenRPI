@@ -3759,7 +3759,7 @@ void
 	third_person.append("#0");
 
 	bool tasted;
-	std:string taste;
+	std::string taste;
 
 	if (drink->ink_color && str_cmp(drink->ink_color, "(null)"))
 	{
