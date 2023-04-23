@@ -11,6 +11,8 @@
 #include <ctype.h>
 #include <time.h>
 #include <math.h>
+#include <iterator>
+#include <vector>
 
 #include "server.h"
 #include "structs.h"
@@ -3560,7 +3562,7 @@ void
 
 	// First we go through and make sure this guy isn't already on our list:
 	// if he is, just return at this point.
-	//vector<targeted_bys*>::iterator it;
+	//std::vector<targeted_bys*>::iterator it;
 	//for (it = target->targeted_by->begin(); it != target->targeted_by->end(); it++)
 	//{
 	//    if ((*it)->ch == aimer)
@@ -3623,7 +3625,7 @@ void
 
 	// Go through, and remove where we find a match -- if they do exist as a ch, clear
 	// out their aiming and aiming_at too.
-	//for (vector<targeted_bys*>::iterator it = target->targeted_by->begin(); it != target->targeted_by->end();it++)
+	//for (std::vector<targeted_bys*>::iterator it = target->targeted_by->begin(); it != target->targeted_by->end();it++)
 	//{
 	//    if ((*it)->ch == aimer)
 	//    {
@@ -3655,7 +3657,7 @@ void
 	//    return;
 
 	// Go through, and remove the aim and aiming_at data of everyone involved.
-	//for (vector<targeted_bys*>::iterator it = target->targeted_by->begin(); it != target->targeted_by->end();it++)
+	//for (std::vector<targeted_bys*>::iterator it = target->targeted_by->begin(); it != target->targeted_by->end();it++)
 	//{
 	//    if ((*it)->ch)
 	//    {
@@ -3715,7 +3717,7 @@ bool
 
 	// First we go through and make sure this guy isn't already on our list:
 	// if he is, we kick him back off.
-	vector<overwatch_enemy*>::iterator it;
+	std::vector<overwatch_enemy*>::iterator it;
 	for (it = ch->over_enemies->begin(); it != ch->over_enemies->end(); it++)
 	{
 		if ((*it)->sdesc == char_short(tch))
@@ -3799,7 +3801,7 @@ bool
 	bool is_found = false;
 
 	// If all those conditions are met, then we go through our overwatch list and see if we can get a match.
-	vector<overwatch_enemy*>::iterator it;
+	std::vector<overwatch_enemy*>::iterator it;
 	for (it = ch->over_enemies->begin(); it != ch->over_enemies->end(); it++)
 	{
 		if ((*it)->sdesc == char_short(tch))
@@ -3887,7 +3889,7 @@ void
 	if (!ch)
 		return;
 
-	for (vector<overwatch_enemy*>::iterator it = ch->over_enemies->begin(); it != ch->over_enemies->end();)
+	for (std::vector<overwatch_enemy*>::iterator it = ch->over_enemies->begin(); it != ch->over_enemies->end();)
 	{
 		(*it)->time --;
 		if ((*it)->time <= 0)
@@ -3912,7 +3914,7 @@ void
 	if (!ch)
 		return;
 
-	for (vector<overwatch_enemy*>::iterator it = ch->over_enemies->begin(); it != ch->over_enemies->end();it++)
+	for (std::vector<overwatch_enemy*>::iterator it = ch->over_enemies->begin(); it != ch->over_enemies->end();it++)
 	{
 		run++;
 		delete *it;
@@ -4035,7 +4037,7 @@ void
 		else
 		{
 			sprintf(buf + strlen(buf), "You currently have the following entries on your overwatch list:\n");
-			vector<overwatch_enemy*>::iterator it;
+			std::vector<overwatch_enemy*>::iterator it;
 			for (it = ch->over_enemies->begin(); it != ch->over_enemies->end(); it++)
 			{
 				sprintf(buf + strlen(buf), "   %d: #5%s#0, via #6%s#0.\n",
@@ -4063,7 +4065,7 @@ void
 		}
 		else
 		{
-			vector<overwatch_enemy*>::iterator it;
+			std::vector<overwatch_enemy*>::iterator it;
 			for (it = ch->over_enemies->begin(); it != ch->over_enemies->end(); it++)
 			{
 				if (atoi(argument) == ind)
@@ -4141,7 +4143,7 @@ void
 				return;
 			}
 
-			vector<overwatch_enemy*>::iterator it;
+			std::vector<overwatch_enemy*>::iterator it;
 			for (it = ch->over_enemies->begin(); it != ch->over_enemies->end(); it++)
 			{
 				if ((*it)->sdesc == char_short(target))
@@ -4285,7 +4287,7 @@ void
 				return;
 			}
 
-			vector<overwatch_enemy*>::iterator it;
+			std::vector<overwatch_enemy*>::iterator it;
 			for (it = ch->over_enemies->begin(); it != ch->over_enemies->end(); it++)
 			{
 				if ((*it)->sdesc == char_short(target))
