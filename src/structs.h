@@ -1247,8 +1247,8 @@ typedef signed char shortint;
 #define SKILL_HANDGUN	    	11
 #define SKILL_RIFLE		        12
 #define SKILL_SMG       	    13
-#define SKILL_ARCHERY		    14
-#define SKILL_EXPLOSIVES	    15      // One day this will be awesome.
+#define SKILL_GUNNERY		    14
+#define SKILL_ARCHERY	    15      // One day this will be awesome.
 
 #define LAST_WEAPON_SKILL       14      // The last real weaponskill we have.
 
