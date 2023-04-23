@@ -5390,7 +5390,7 @@ morph_mob (CHAR_DATA * ch)
             || IS_RIDER (ch)
             || IS_RIDEE (ch)
             || (IS_DROWNING(ch))
-            || (ch->following > 0)
+            || (ch->following != nullptr)
             || !IS_NPC (ch)
             || IS_SUFFOCATING (ch))
         return;
