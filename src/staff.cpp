@@ -19,6 +19,8 @@
 #include <sys/stat.h>
 #include <mysql/mysql.h>
 #include <limits.h>
+#include <vector>
+#include <iterator> 
 
 #include "server.h"
 #include "structs.h"
