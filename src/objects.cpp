@@ -7601,7 +7601,7 @@ void
 
 				j = 1;
 
-				vector<foraged_good*>::iterator it;
+				std::vector<foraged_good*>::iterator it;
 				for (it = foraged_goods_list.begin(); it != foraged_goods_list.end(); it++)
 				{
 					if ((*it)->sector != sector_type)
@@ -10497,7 +10497,7 @@ void
 		}
 	}
 
-	vector<foraged_good*>::iterator it;
+	std::vector<foraged_good*>::iterator it;
 	char forage_buf[MAX_STRING_LENGTH] = { '\0' };
 	for (it = foraged_goods_list.begin(); it != foraged_goods_list.end(); it++)
 	{
