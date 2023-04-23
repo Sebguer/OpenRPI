@@ -2688,12 +2688,14 @@ show_obj_to_char (OBJ_DATA * obj, CHAR_DATA * ch, int mode)
                              "\n   This bow has been strung with #2%s#0.\n", obj->contains->short_description);
                 }
 
+/*                 
                 if ((obj->o.weapon.use_skill == SKILL_ARCHERY)
                         && obj->loaded)
                 {
                     sprintf (buffer + strlen(buffer),
                              "\n   This bow is nocked with #2%s#0.\n", obj->loaded->short_description);
-                }
+                } 
+*/
 
                 if (IS_SET (obj->obj_flags.extra_flags, ITEM_THROWING)
                         && mode == 15)
@@ -3467,22 +3469,22 @@ show_obj_to_char (OBJ_DATA * obj, CHAR_DATA * ch, int mode)
              obj->o.od.value[0] <= 0)
         sprintf (buffer + strlen (buffer), " #1(empty)#0");
 
-    if (mode == 1 && GET_ITEM_TYPE (obj) == ITEM_TOOL && obj->o.od.value >= 0 &&
-            obj->o.od.value[0] == vtoo(obj->nVirtual)->o.od.value[0])
-        sprintf (buffer + strlen (buffer), " #1(full)#0");
-    else if (mode == 1 && GET_ITEM_TYPE (obj) == ITEM_TOOL && obj->o.od.value >= 0 &&
-             obj->o.od.value[0] > vtoo(obj->nVirtual)->o.od.value[0] / 2)
-        sprintf (buffer + strlen (buffer), " #1(mostly full)#0");
-    else if (mode == 1 && GET_ITEM_TYPE (obj) == ITEM_TOOL && obj->o.od.value >= 0 &&
-             obj->o.od.value[0] == vtoo(obj->nVirtual)->o.od.value[0] / 2)
-        sprintf (buffer + strlen (buffer), " #1(half full)#0");
-    else if (mode == 1 && GET_ITEM_TYPE (obj) == ITEM_TOOL && obj->o.od.value >= 0 &&
-             obj->o.od.value[0] < vtoo(obj->nVirtual)->o.od.value[0] / 2
-             && obj->o.od.value[0] > 0)
-        sprintf (buffer + strlen (buffer), " #1(mostly empty)#0");
+    if (mode == 1 && GET_ITEM_TYPE (obj) == ITEM_TOOL && *obj->o.od.value >= 0 &&
+        obj->o.od.value[0] == vtoo(obj->nVirtual)->o.od.value[0])
+    sprintf (buffer + strlen (buffer), " #1(full)#0");
+    else if (mode == 1 && GET_ITEM_TYPE (obj) == ITEM_TOOL && *obj->o.od.value >= 0 &&
+         obj->o.od.value[0] > vtoo(obj->nVirtual)->o.od.value[0] / 2)
+    sprintf (buffer + strlen (buffer), " #1(mostly full)#0");
+    else if (mode == 1 && GET_ITEM_TYPE (obj) == ITEM_TOOL && *obj->o.od.value >= 0 &&
+         obj->o.od.value[0] == vtoo(obj->nVirtual)->o.od.value[0] / 2)
+    sprintf (buffer + strlen (buffer), " #1(half full)#0");
+    else if (mode == 1 && GET_ITEM_TYPE (obj) == ITEM_TOOL && *obj->o.od.value >= 0 &&
+         obj->o.od.value[0] < vtoo(obj->nVirtual)->o.od.value[0] / 2
+         && obj->o.od.value[0] > 0)
+    sprintf (buffer + strlen (buffer), " #1(mostly empty)#0");
     else if (mode == 1 && GET_ITEM_TYPE (obj) == ITEM_TOOL &&
-             obj->o.od.value[0] == 0)
-        sprintf (buffer + strlen (buffer), " #1(empty)#0");
+         obj->o.od.value[0] == 0)
+    sprintf (buffer + strlen (buffer), " #1(empty)#0");
 
     if (mode == 1 && IS_SET (obj->obj_flags.extra_flags2, ITEM_CONCEALED))
         sprintf (buffer + strlen (buffer), " #1(concealed)#0");
