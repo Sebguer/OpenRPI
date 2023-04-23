@@ -373,6 +373,655 @@ do_throw (CHAR_DATA * ch, char *argument, int cmd)
                 // Better your explosive skill is, quicker the grenade goes off - every 20 points is another
                 // second lost.
                 int grenade_counter = 6;
+                grenade_counter = MAX(1, grenade_counter - ((ch->skills[SKILL_EXPLOSIVES] + 10) / 20));
+                tobj->o.grenade.status = 1;
+                add_second_affect(SA_GRENADE, grenade_counter, NULL, tobj, 0, 0);
+                sprintf (buf, "You arm $p before hurling it %sward.", dirs[dir]);
+                act (buf, false, ch, tobj, 0, TO_CHAR | _ACT_FORMAT);
+                sprintf (buf, "$n arms $p before hurling it %sward.", dirs[dir]);
+                buf[2] = toupper (buf[2]);
+                watched_action(ch, buf, 0, 1);
+                act (buf, true, ch, tobj, 0, TO_ROOM | _ACT_FORMAT);
+            }
+            else
+            {
+                sprintf (buf, "You hurl #2%s#0 %sward.", tobj->short_description, dirs[dir]);
+                act (buf, false, ch, 0, 0, TO_CHAR | _ACT_FORMAT);
+                sprintf (buf, "#5%s#0 hurls #2%s#0 %sward.", char_short (ch), tobj->short_description, dirs[dir]);
+                buf[2] = toupper (buf[2]);
+                watched_action(ch, buf, 0, 1);
+                act (buf, true, ch, 0, 0, TO_ROOM | _ACT_FORMAT);
+            }
+
+            obj_from_char (&tobj, 0);
+            obj_to_room (tobj, troom->vnum);
+            sprintf (buf, "#2%s#0 flies in, hurled from %s.", tobj->short_description, verbose_dirs[rev_dir[dir]]);
+            buf[2] = toupper (buf[2]);
+            send_to_room (buf, troom->vnum);
+
+            return;
+        }
+    }//if (!tch && dir != -1)
+
+    if (tch)
+    {
+        if (tch == ch)
+        {
+            send_to_char ("That wouldn't require much of a throw...\n", ch);
+            return;
+        }
+
+        skill_learn(ch, SKILL_AIM);
+
+        if (are_grouped (ch, tch) && *argument != '!')
+        {
+            sprintf (buf,
+                     "#1You decide not to throw at $N #1who is a fellow group member!#0");
+            act (buf, false, ch, 0, tch, TO_CHAR | _ACT_FORMAT);
+            return;
+        }
+
+        if (IS_SET (tch->act, ACT_VEHICLE))
+        {
+            sprintf (buf, "And what good will that do to hurt $N?");
+            act (buf, false, ch, 0, tch, TO_CHAR | _ACT_FORMAT);
+            return;
+        }
+
+        if (ch->room != tch->room && dir != -1)
+        {
+            if ((exit = EXIT (ch, dir)))
+                troom = vnum_to_room (EXIT (ch, dir)->to_room);
+
+            if (!troom)
+            {
+                send_to_char ("There is no exit in that direction.\n", ch);
+                return;
+            }
+
+            if (exit
+                    && IS_SET (exit->exit_info, EX_CLOSED)
+                    && !IS_SET (exit->exit_info, EX_ISGATE))
+            {
+                send_to_char ("Your view is blocked.\n", ch);
+                return;
+            }
+        }
+        notify_guardians (ch, tch, 5);
+
+        if (dir != -1)
+            range_mod = 5;
+
+
+        result = calculate_missile_result (ch, SKILL_AIM, ((ch->balance * -10) + range_mod), tch, 0, 0, tobj, NULL, &location, &damage, &poison, rev_dir[dir]);
+
+
+        if (get_affect (ch, MAGIC_HIDDEN))
+        {
+            remove_affect_type (ch, MAGIC_HIDDEN);
+            send_to_char ("You emerge from concealment and prepare to throw.\n\n",
+                          ch);
+        }
+
+        if ((result == CRITICAL_MISS || result == MISS) && tch->fighting
+                && tch->fighting != ch && number (1, 25) > ch->dex)
+        {
+            send_to_char("You realize there are no safe targets.\n", ch);
+            return;
+        }
+
+        damage = (int) damage;
+
+        wear_loc1 = body_tab[0][location].wear_loc1;
+        wear_loc2 = body_tab[0][location].wear_loc2;
+
+        if (wear_loc1)
+        {
+            armor1 = get_equip (tch, wear_loc1);
+            if (armor1 && GET_ITEM_TYPE (armor1) != ITEM_ARMOR)
+                armor1 = NULL;
+        }
+        if (wear_loc2)
+        {
+            armor2 = get_equip (tch, wear_loc2);
+            if (armor2 && GET_ITEM_TYPE (armor2) != ITEM_ARMOR)
+                armor2 = NULL;
+        }
+
+        if (!ch->fighting && damage > 3)
+            criminalize (ch, tch, tch->room->zone, CRIME_KILL);
+
+        if (ch->room != tch->room)
+        {
+            sprintf (buf, "You hurl #2%s#0 %s, toward #5%s#0.",
+                     tobj->short_description, dirs[dir],
+                     char_short (tch));
+            sprintf (buf2, "#5%s#0 hurls #2%s#0 %s, toward #5%s#0.",
+                     char_short (ch), tobj->short_description,
+                     dirs[dir], char_short (tch));
+            buf2[2] = toupper (buf2[2]);
+            watched_action(ch, buf2, 0, 1);
+            act (buf, false, ch, 0, 0, TO_CHAR | _ACT_FORMAT);
+            act (buf2, false, ch, 0, 0, TO_ROOM | _ACT_FORMAT);
+        }
+        else
+        {
+            sprintf (buf, "You hurl #2%s#0 forcefully at #5%s#0.",
+                     tobj->short_description, char_short (tch));
+            sprintf (buf2, "#5%s#0 hurls #2%s#0 forcefully at #5%s#0.",
+                     char_short (ch), tobj->short_description,
+                     char_short (tch));
+            buf2[2] = toupper (buf2[2]);
+            watched_action(ch, buf2, 0, 1);
+            sprintf (buf3, "#5%s#0 hurls #2%s#0 forcefully at you.",
+                     char_short (ch), tobj->short_description);
+            buf3[2] = toupper (buf3[2]);
+            act (buf, false, ch, 0, tch, TO_CHAR | _ACT_FORMAT);
+            act (buf2, false, ch, 0, tch, TO_NOTVICT | _ACT_FORMAT);
+            act (buf3, false, ch, 0, tch, TO_VICT | _ACT_FORMAT);
+        }
+
+        if (GET_ITEM_TYPE (tobj) == ITEM_WEAPON
+                && (tobj->o.weapon.hit_type == 0 || tobj->o.weapon.hit_type == 1
+                    || tobj->o.weapon.hit_type == 2
+                    || tobj->o.weapon.hit_type == 4))
+        {
+            if (result != CRITICAL_HIT && armor1
+                    && armor1->o.armor.armor_type >= 2)
+                can_lodge = false;
+            else if (result != CRITICAL_HIT && armor2
+                     && armor2->o.armor.armor_type >= 2)
+                can_lodge = false;
+            else if (result != CRITICAL_HIT && tch->armor && tch->armor >= 4)
+                can_lodge = false;
+            else
+                can_lodge = false;
+        }
+
+        sprintf (strike_location, "%s", figure_location (tch, location));
+
+        if ((af = get_affect (tch, MAGIC_AFFECT_PROJECTILE_IMMUNITY)))
+        {
+            sprintf (buf, "%s", spell_activity_echo (af->a.spell.sn, af->type));
+            if (!*buf)
+                sprintf (buf,
+                         "\nThe projectile is deflected harmlessly aside by some invisible force.");
+            sprintf (buf2, "\n%s", buf);
+            result = MISS;
+            damage = 0;
+        }
+
+        else if (result == MISS)
+        {
+            sprintf (buf, "%s#0 comes flying through the air from the %s, headed straight toward #5%s#0\n\nIt misses completely.", tobj->short_description, dirs[rev_dir[dir]], char_short(tch));
+            *buf = toupper (*buf);
+            sprintf (buffer, "#2%s", buf);
+            sprintf (buf, "%s", buffer);
+
+            sprintf (buf2, "#2%s#0 comes flying through the air from the %s, headed straight toward you!\n\nIt misses completely.", tobj->short_description, dirs[rev_dir[dir]]);
+            *buf2 = toupper (*buf2);
+            sprintf (buffer, "#2%s", buf2);
+            sprintf (buf2, "%s", buffer);
+
+            sprintf (buf4, "It misses completely.");
+        }
+        else if (result == CRITICAL_MISS)
+        {
+            sprintf (buf, "#2%s#0 comes flying through the air from the %s, headed straight toward #5%s#0\n\nIt flies far wide of any target.", tobj->short_description, dirs[rev_dir[dir]], char_short(tch));
+            *buf = toupper (*buf);
+            sprintf (buffer, "#2%s", buf);
+            sprintf (buf, "%s", buffer);
+
+            sprintf (buf2, "#2%s#0 comes flying through the air from the %s, headed straight toward you!\n\nIt flies far wide of any target.", tobj->short_description, dirs[rev_dir[dir]]);
+            *buf2 = toupper (*buf2);
+            sprintf (buffer, "#2%s", buf2);
+            sprintf (buf2, "%s", buffer);
+
+            sprintf (buf4, "It flies far wide of any target.");
+        }
+        else if (result == COVER_HIT)
+        {
+            af = get_affect(tch, AFFECT_COVER);
+            if (af && af->a.cover.obj && obj_short_desc(af->a.cover.obj))
+            {
+                sprintf (buf, "#2%s#0 comes flying through the air from the %s, headed straight toward #5%s#0\n\nIt glances harmlessly off #2%s#0.", tobj->short_description, dirs[rev_dir[dir]], char_short(tch), obj_short_desc(af->a.cover.obj));
+                *buf = toupper (*buf);
+                sprintf (buffer, "#2%s", buf);
+                sprintf (buf, "%s", buffer);
+
+                sprintf (buf2, "#2%s#0 comes flying through the air from the %s, headed straight toward you!\n\nIt glances harmlessly off #2%s#0.", tobj->short_description, dirs[rev_dir[dir]], obj_short_desc(af->a.cover.obj));
+                *buf2 = toupper (*buf2);
+                sprintf (buffer, "#2%s", buf2);
+                sprintf (buf2, "%s", buffer);
+
+                sprintf (buf4, "It glances harmlessly off #2%s#0.", obj_short_desc(af->a.cover.obj));
+            }
+            else
+            {
+                sprintf (buf, "#2%s#0 comes flying through the air from the %s, headed straight toward #5%s#0\n\nIt glances harmlessly off the scenery.", tobj->short_description, dirs[rev_dir[dir]], char_short(tch));
+                *buf = toupper (*buf);
+                sprintf (buffer, "#2%s", buf);
+                sprintf (buf, "%s", buffer);
+
+                sprintf (buf2, "#2%s#0 comes flying through the air from the %s, headed straight toward you!\n\nIt glances harmlessly off the scenery.", tobj->short_description, dirs[rev_dir[dir]]);
+                *buf2 = toupper (*buf2);
+                sprintf (buffer, "#2%s", buf2);
+                sprintf (buf2, "%s", buffer);
+
+                sprintf (buf4, "It glances harmlessly off the scenery.");
+            }
+        }
+        else if (result == SHIELD_BLOCK)
+        {
+            if (obj_short_desc (get_equip (tch, WEAR_SHIELD)))
+            {
+                sprintf (buf, "#2%s#0 comes flying through the air from the %s, headed straight toward #5%s#0\n\nIt glances harmlessly off #2%s#0.", tobj->short_description, dirs[rev_dir[dir]], char_short(tch), obj_short_desc (get_equip (tch, WEAR_SHIELD)));
+                *buf = toupper (*buf);
+                sprintf (buffer, "#2%s", buf);
+                sprintf (buf, "%s", buffer);
+
+                sprintf (buf2, "#2%s#0 comes flying through the air from the %s, headed straight toward you!\n\nIt glances harmlessly off #2%s#0.", tobj->short_description, dirs[rev_dir[dir]], obj_short_desc (get_equip (tch, WEAR_SHIELD)));
+                *buf2 = toupper (*buf2);
+                sprintf (buffer, "#2%s", buf2);
+                sprintf (buf2, "%s", buffer);
+
+                sprintf (buf4, "It glances harmlessly off #2%s#0.", obj_short_desc (get_equip (tch, WEAR_SHIELD)));
+            }
+            else
+            {
+                sprintf (buf, "#2%s#0 comes flying through the air from the %s, headed straight toward #5%s#0\n\nIt glances harmlessly off something.", tobj->short_description, dirs[rev_dir[dir]], char_short(tch));
+                *buf = toupper (*buf);
+                sprintf (buffer, "#2%s", buf);
+                sprintf (buf, "%s", buffer);
+
+                sprintf (buf2, "#2%s#0 comes flying through the air from the %s, headed straight toward you!\n\nIt glances harmlessly off something.", tobj->short_description, dirs[rev_dir[dir]]);
+                *buf2 = toupper (*buf2);
+                sprintf (buffer, "#2%s", buf2);
+                sprintf (buf2, "%s", buffer);
+
+                sprintf (buf4, "It glances harmlessly off something.");
+            }
+        }
+        else if (result == GLANCING_HIT)
+        {
+            sprintf (buf, "#2%s#0 comes flying through the air from the %s, headed straight toward #5%s#0\n\nIt grazes %s on the %s.", tobj->short_description, dirs[rev_dir[dir]], char_short(tch), HMHR (tch), expand_wound_loc (strike_location));
+            *buf = toupper (*buf);
+            sprintf (buffer, "#2%s", buf);
+            sprintf (buf, "%s", buffer);
+
+            sprintf (buf2, "#2%s#0 comes flying through the air from the %s, headed straight toward you!\n\nIt grazes you on the %s.", tobj->short_description, dirs[rev_dir[dir]], expand_wound_loc (strike_location));
+            *buf2 = toupper (*buf2);
+            sprintf (buffer, "#2%s", buf2);
+            sprintf (buf2, "%s", buffer);
+
+            sprintf (buf4, "It grazes %s on the %s.",HMHR (tch), expand_wound_loc (strike_location));
+
+        }
+        else if (result == HIT)
+        {
+            if (can_lodge)
+            {
+                sprintf (buf, "#2%s#0 comes flying through the air from the %s, headed straight toward #5%s#0\n\nIt lodges in %s %s.", tobj->short_description, dirs[rev_dir[dir]], char_short(tch), HSHR (tch), expand_wound_loc (strike_location));
+                *buf = toupper (*buf);
+                sprintf (buffer, "#2%s", buf);
+                sprintf (buf, "%s", buffer);
+
+                sprintf (buf2, "#2%s#0 comes flying through the air from the %s, headed straight toward you!\n\nIt lodges in your %s.", tobj->short_description, dirs[rev_dir[dir]], expand_wound_loc (strike_location));
+                *buf2 = toupper (*buf2);
+                sprintf (buffer, "#2%s", buf2);
+                sprintf (buf2, "%s", buffer);
+
+                sprintf (buf4, "It lodges in %s %s.", HSHR (tch), expand_wound_loc (strike_location));
+            }
+            else
+            {
+                sprintf (buf, "#2%s#0 comes flying through the air from the %s, headed straight toward #5%s#0\n\nIt strikes %s on the %s.", tobj->short_description, dirs[rev_dir[dir]], char_short(tch),  HMHR (tch), expand_wound_loc (strike_location));
+                *buf = toupper (*buf);
+                sprintf (buffer, "#2%s", buf);
+                sprintf (buf, "%s", buffer);
+
+                sprintf (buf2, "#2%s#0 comes flying through the air from the %s, headed straight toward you!\n\nIt strikes you on the %s.", tobj->short_description, dirs[rev_dir[dir]], expand_wound_loc (strike_location));
+                *buf2 = toupper (*buf2);
+                sprintf (buffer, "#2%s", buf2);
+                sprintf (buf2, "%s", buffer);
+
+                sprintf (buf4, "It strikes %s on the %s.", HMHR (tch), expand_wound_loc (strike_location));
+            }
+        }
+        else if (result == CRITICAL_HIT)
+        {
+            if (can_lodge)
+            {
+                sprintf (buf, "#2%s#0 comes flying through the air from the %s, headed straight toward #5%s#0\n\nIt lodges deeply in %s %s!", tobj->short_description, dirs[rev_dir[dir]], char_short(tch),  HSHR (tch), expand_wound_loc (strike_location));
+                *buf = toupper (*buf);
+                sprintf (buffer, "#2%s", buf);
+                sprintf (buf, "%s", buffer);
+
+                sprintf (buf2, "#2%s#0 comes flying through the air from the %s, headed straight toward you!\n\nIt lodges deeply in your %s!", tobj->short_description, dirs[rev_dir[dir]], expand_wound_loc (strike_location));
+                *buf2 = toupper (*buf2);
+                sprintf (buffer, "#2%s", buf2);
+                sprintf (buf2, "%s", buffer);
+
+                sprintf (buf4, "It lodges deeply in %s %s.", HSHR (tch), expand_wound_loc (strike_location));
+            }
+            else
+            {
+                sprintf (buf, "#2%s#0 comes flying through the air from the %s, headed straight toward #5%s#0\n\nIt strikes %s solidly on the %s.", HMHR (tch), tobj->short_description, dirs[rev_dir[dir]], char_short(tch), expand_wound_loc (strike_location));
+                *buf = toupper (*buf);
+                sprintf (buffer, "#2%s", buf);
+                sprintf (buf, "%s", buffer);
+
+                sprintf (buf2, "#2%s#0 comes flying through the air from the %s, headed straight toward you!\n\nIt strikes you solidly on the %s.", tobj->short_description, dirs[rev_dir[dir]], expand_wound_loc (strike_location));
+                *buf2 = toupper (*buf2);
+                sprintf (buffer, "#2%s", buf2);
+                sprintf (buf2, "%s", buffer);
+
+                sprintf (buf4, "It strikes %s solidly on the %s.", HMHR (tch), expand_wound_loc (strike_location));
+            }
+        }
+
+        char *out1, *out2, *out3;
+        CHAR_DATA* rch = 0;
+        reformat_string (buf, &out1);
+        reformat_string (buf2, &out2);
+        reformat_string (buf4, &out3);
+
+        if (ch->room != tch->room)
+        {
+            // aggressor's room
+            for (rch = ch->room->people; rch; rch = rch->next_in_room)
+            {
+                send_to_char ("\n", rch);
+                send_to_char (out3, rch);
+            }
+        }
+
+        // victim's room
+        for (rch = tch->room->people; rch; rch = rch->next_in_room)
+        {
+            send_to_char ("\n", rch);
+            if (ch->room == tch->room)
+                send_to_char (out3, rch);
+            else if (rch == tch)
+                send_to_char (out2, rch);
+            else
+                send_to_char (out1, rch);
+        }
+
+        mem_free (out1);
+        mem_free (out2);
+
+        obj_from_char (&tobj, 0);
+
+        if ((result == HIT || result == CRITICAL_HIT) && can_lodge)
+        {
+            lodge_missile (tch, tobj, strike_location, 0);
+        }
+        else
+        {
+			// If you throw at someone in the same room who's fighting,
+			// then you've lost that weapon for 15 seconds.
+			obj_to_room (tobj, tch->in_room);
+			if (tch->fighting && ch->in_room == tch->in_room)
+			{
+				add_second_affect (SA_GET_OBJ, 15, ch, tobj, NULL, 0);
+				tobj->tmp_flags |= SA_DROPPED;
+			}
+
+            if (GET_ITEM_TYPE(tobj) == ITEM_GRENADE && tobj->o.grenade.status == 1)
+            {
+                send_to_gods("Grenade land-in-room test.");
+                add_second_affect(SA_GRENADE, 5, NULL, tobj, 0, 0);
+            }
+        }
+
+        if (damage > 0)
+        {
+            if (!IS_NPC (tch))
+            {
+                tch->delay_ch = ch;
+                tch->delay_info1 = tobj->nVirtual;
+            }
+            if (ch->room != tch->room)
+                ranged = true;
+            if (GET_ITEM_TYPE (tobj) == ITEM_WEAPON)
+                wound_type = tobj->o.weapon.hit_type;
+            else
+                wound_type = 3;
+            if (wound_to_char
+                    (tch, strike_location, (int) damage, wound_type, 0, poison, 0))
+            {
+                if (ranged)
+                    send_to_char ("\nYour target collapses, dead.\n", ch);
+                ch->ranged_enemy = NULL;
+                return;
+            }
+            if (!IS_NPC (tch))
+            {
+                tch->delay_ch = NULL;
+                tch->delay_info1 = 0;
+            }
+        }
+
+        if (ch->agi <= 9)
+            ch->balance += -14;
+        else if (ch->agi > 9 && ch->agi <= 13)
+            ch->balance += -12;
+        else if (ch->agi > 13 && ch->agi <= 15)
+            ch->balance += -10;
+        else if (ch->agi > 15 && ch->agi <= 18)
+            ch->balance += -8;
+        else
+            ch->balance += -6;
+
+        ch->balance = MAX (ch->balance, -25);
+
+        npc_ranged_response (tch, ch);	// do_throw
+
+        return;
+    }
+
+    send_to_char
+    ("There has been an error; please report your command syntax to the staff.\n",
+     ch);
+}
+{
+    OBJ_DATA *tobj, *armor1 = NULL, *armor2 = NULL;
+    ROOM_DATA *troom = NULL;
+    ROOM_DIRECTION_DATA *exit = NULL;
+    CHAR_DATA *tch = NULL;
+    AFFECTED_TYPE *af;
+    bool can_lodge = false, ranged = false;
+    int dir = 0, result = 0, location = 0;
+    int wear_loc1 = 0, wear_loc2 = 0, wound_type = 0;
+    float damage = 0;
+    int range_mod = 0;
+    char buf[MAX_STRING_LENGTH];
+    char buf2[MAX_STRING_LENGTH];
+    char buf3[MAX_STRING_LENGTH];
+    char buf4[MAX_STRING_LENGTH];
+    char buffer[MAX_STRING_LENGTH];
+    char strike_location[MAX_STRING_LENGTH];
+    int poison = 0;
+    bool aimed_room = false;
+
+    const char *verbose_dirs[] =
+    {
+        "the north",
+        "the east",
+        "the south",
+        "the west",
+        "above",
+        "below",
+        "outside",
+        "inside",
+        "the northeast",
+        "the northwest",
+        "the southeast",
+        "the southwest",
+        "\n"
+    };
+
+    if (IS_SWIMMING (ch))
+    {
+        send_to_char ("You can't do that while swimming!\n", ch);
+        return;
+    }
+
+    if (IS_FLOATING (ch))
+    {
+        send_to_char("You can't do that while floating!\n", ch);
+        return;
+    }
+
+    if (IS_SET (ch->room->room_flags, OOC) && IS_MORTAL (ch))
+    {
+        send_to_char ("You cannot do this in an OOC area.\n", ch);
+        return;
+    }
+
+    if (IS_SET(ch->room->room_flags, PEACE))
+    {
+        act ("Something prohibits you from taken such an action.", false, ch, 0, 0, TO_CHAR);
+        return;
+    }
+
+    argument = one_argument (argument, buf);
+
+    if (!*buf)
+    {
+        send_to_char ("What did you wish to throw?\n", ch);
+        return;
+    }
+
+    if (!(tobj = get_obj_in_list (buf, ch->right_hand)) &&
+            !(tobj = get_obj_in_list (buf, ch->left_hand)))
+    {
+        send_to_char ("You aren't holding that in either hand.\n", ch);
+        return;
+    }
+
+    argument = one_argument (argument, buf);
+
+    if (!*buf)
+    {
+        send_to_char ("At what did you wish to throw?\n", ch);
+        return;
+    }
+
+    if ((dir = is_direction (buf)) == -1)
+    {
+        if (!str_cmp(buf, "room"))
+        {
+            aimed_room = true;
+
+        }
+        else if (!(tch = get_char_room_vis (ch, buf)))
+        {
+            send_to_char ("At what did you wish to throw?\n", ch);
+            return;
+        }
+
+		/*
+        if (obj && GET_ITEM_TYPE(obj) != ITEM_COVER && GET_ITEM_TYPE(obj) != ITEM_TABLE)
+        {
+            send_to_char ("You can only target a grenade at a piece of cover or furniture.\n", ch);
+            return;
+        }
+		*/
+    }
+
+    if (ch->fighting)
+    {
+        send_to_char
+        ("You are currently engaged in melee combat and cannot throw.\n", ch);
+        return;
+    }
+
+    if (ch->balance <= -15)
+    {
+        send_to_char ("You're far too off-balance to attempt a throw.\n", ch);
+        return;
+    }
+
+    if (tobj->obj_flags.weight / 100 > ch->str * 2)
+    {
+        send_to_char ("That object is too heavy to throw effectively.\n", ch);
+        return;
+    }
+
+    if (tobj->count > 1)
+    {
+        send_to_char ("You may only throw one object at a time.\n", ch);
+        return;
+    }
+
+    if (!tch && dir != -1)
+    {
+        if ((exit = EXIT (ch, dir)))
+            troom = vnum_to_room (EXIT (ch, dir)->to_room);
+
+        /* for throwing 'out' of a dwelling */
+        //if ((dir == 6) && (ch->in_room > 100000))
+        //	troom = vtor(ch->was_in_room);
+
+        /*** harsh way to deal with throwing things out without crashing the game	**/
+        if ((dir == 6) && (ch->in_room > 100000))
+        {
+            obj_from_char (&tobj, 0);
+            extract_obj (tobj);
+            sprintf (buf, "You dispose of  #2%s#0.", tobj->short_description);
+            act (buf, false, ch, tobj, 0, TO_CHAR | _ACT_FORMAT);
+            return;
+        }
+        /****/
+        if (!troom)
+        {
+            send_to_char ("There is no exit in that direction.\n", ch);
+            return;
+        }
+
+        if (exit
+                && IS_SET (exit->exit_info, EX_ISDOOR)
+                && IS_SET (exit->exit_info, EX_CLOSED)
+                && !IS_SET (exit->exit_info, EX_ISGATE))
+        {
+            send_to_char ("Your view is blocked.\n", ch);
+            return;
+        }
+
+        argument = one_argument (argument, buf);
+
+        if (*buf)
+        {
+            tch = get_char_room_vis2 (ch, troom->vnum, buf);
+            if (!has_been_sighted (ch, tch))
+                tch = NULL;
+            if (!tch)
+            {
+                send_to_char
+                ("You do not see anyone or anything like that in this direction.\n", ch);
+                return;
+            }
+
+			/*
+            if (GET_ITEM_TYPE(obj) != ITEM_COVER && GET_ITEM_TYPE(obj) != ITEM_TABLE)
+            {
+              send_to_char ("You can only target a grenade at a piece of cover or furniture.\n", ch);
+              return;
+            }
+			*/
+        }
+
+        if (!tch)
+        {
+
+            // If we're aiming a grenade at the room in general, we just toss it and go.
+            if (aimed_room && GET_ITEM_TYPE(tobj) == ITEM_GRENADE && tobj->o.grenade.status != 2)
+            {
+                // Better your explosive skill is, quicker the grenade goes off - every 20 points is another
+                // second lost.
+                int grenade_counter = 6;
                 grenade_counter = MAX(1, grenade_counter - ((ch->skills[SKILL_ARCHERY] + 10) / 20));
                 tobj->o.grenade.status = 1;
                 add_second_affect(SA_GRENADE, grenade_counter, NULL, tobj, 0, 0);
