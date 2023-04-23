@@ -119,7 +119,7 @@ typedef struct targeted_bys	TARGETED_BY;
 #ifndef __cplusplus
 typedef char bool;
 #endif
-typedef char byte;
+typedef char rpi_byte;
 typedef unsigned long bitflag;
 typedef signed char shortint;
 
@@ -1562,7 +1562,7 @@ struct writing_data
 
 struct written_descr_data	/* for descriptions written in languages */
 {
-    byte language;
+    rpi_byte language;
     char *description;
 };
 

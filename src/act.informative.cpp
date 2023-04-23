@@ -2680,7 +2680,7 @@ show_obj_to_char (OBJ_DATA * obj, CHAR_DATA * ch, int mode)
                 //             "\n  #6Something has been smeared upon the edges of the weapon.#0\n");
                 //}
 
-                /*
+                
                 if ((obj->o.weapon.use_skill == SKILL_ARCHERY)
                         && obj->o.od.value[5] == 1)
                 {
@@ -2694,7 +2694,6 @@ show_obj_to_char (OBJ_DATA * obj, CHAR_DATA * ch, int mode)
                     sprintf (buffer + strlen(buffer),
                              "\n   This bow is nocked with #2%s#0.\n", obj->loaded->short_description);
                 }
-                */
 
                 if (IS_SET (obj->obj_flags.extra_flags, ITEM_THROWING)
                         && mode == 15)
