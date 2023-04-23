@@ -1423,17 +1423,6 @@ void do_disconnect( CHAR_DATA * ch, char *argument, int cmd ) {
 	}
 }
 
-void do_broadwave( CHAR_DATA *ch, char * argument, int cmd ) {
-	string strArgument( argument );
-
-	if ( strArgument.empty() ) {
-		send_to_char( "What do you want to send to the Broadwave?", ch );
-		return;
-	}
-
-	Broadwave.broadcastBroadwave( ch->tname, "Broadwave", strArgument );
-}
-
 /*                                                                          *
  * funtion: do_ban                      < e.g.> ban [ <host> <duration> ]   *
  *                                                                          *

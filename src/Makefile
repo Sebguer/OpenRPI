@@ -26,11 +26,11 @@ nanny.o net_link.o object_damage.o objects.o olc.o \
 perception.o psionics.o roles.o roomprogs.o save.o \
 server.o somatics.o \
 staff.o transformation.o utility.o weather.o wounds.o \
-turf.o traps.o electronic.o variables.o firearms.o BroadwaveClient.o
+turf.o traps.o electronic.o variables.o firearms.o 
 
 HEADERS = \
 account.h clan.h constants.h decl.h group.h net_link.h \
-object_damage.h protos.h server.h structs.h trigram.h utils.h BroadwaveClient.h
+object_damage.h protos.h server.h structs.h trigram.h utils.h 
 
 # default target
 ../bin/server: $(OBJS)
