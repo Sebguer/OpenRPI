@@ -11,6 +11,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <vector>  
+#include <iterator>
 #include <stdlib.h>
 #include <unistd.h>
 #include <ctype.h>
@@ -18,8 +20,7 @@
 #include <mysql/mysql.h>
 #include <dirent.h>
 #include <signal.h>
-#include <vector>  
-#include <iterator>
+
 
 
 #include "server.h"
