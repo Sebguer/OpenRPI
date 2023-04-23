@@ -374,7 +374,7 @@ do_throw (CHAR_DATA * ch, char *argument, int cmd)
                 // Better your explosive skill is, quicker the grenade goes off - every 20 points is another
                 // second lost.
                 int grenade_counter = 6;
-                grenade_counter = MAX(1, grenade_counter - ((ch->skills[SKILL_EXPLOSIVES] + 10) / 20));
+                grenade_counter = MAX(1, grenade_counter - ((ch->skills[SKILL_ARCHERY] + 10) / 20));
                 tobj->o.grenade.status = 1;
                 add_second_affect(SA_GRENADE, grenade_counter, NULL, tobj, 0, 0);
                 sprintf (buf, "You arm $p before hurling it %sward.", dirs[dir]);

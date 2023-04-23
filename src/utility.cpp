@@ -661,7 +661,7 @@ is_restricted_skill (CHAR_DATA * ch, int skill, int prof)
 			ch->skills[SKILL_RIFLE] ||
 			ch->skills[SKILL_SMG] ||
 			ch->skills[SKILL_GUNNERY] ||
-			ch->skills[SKILL_EXPLOSIVES] ||
+			ch->skills[SKILL_ARCHERY] ||
             ch->skills[SKILL_POLEARM])
             return 0;
         else

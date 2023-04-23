@@ -35,9 +35,20 @@
 #include <sys/types.h>
 #include <sys/time.h>
 #include "constants.h"
+#include <string>  
+#include <list>  
+#include <map>  
+#include <set>  
+#include <vector>  
+#include <stdexcept>  
+#include <fstream>  
+#include <iostream>  
+#include <sstream>  
+#include <ios>  
+#include <iterator>
+#include <algorithm>
 
 #include "object_damage.h"
-#include "BroadwaveClient.h"
 
 typedef struct scent_data SCENT_DATA;
 typedef struct trap_data TRAP_DATA;
@@ -119,7 +130,7 @@ typedef struct targeted_bys	TARGETED_BY;
 #ifndef __cplusplus
 typedef char bool;
 #endif
-typedef char byte;
+typedef char rpi_byte;
 typedef unsigned long bitflag;
 typedef signed char shortint;
 
@@ -1248,7 +1259,7 @@ typedef signed char shortint;
 #define SKILL_RIFLE		        12
 #define SKILL_SMG       	    13
 #define SKILL_GUNNERY		    14
-#define SKILL_EXPLOSIVES	    15      // One day this will be awesome.
+#define SKILL_ARCHERY	    15      // One day this will be awesome.
 
 #define LAST_WEAPON_SKILL       14      // The last real weaponskill we have.
 
@@ -1562,13 +1573,13 @@ struct writing_data
 
 struct written_descr_data	/* for descriptions written in languages */
 {
-    byte language;
+    rpi_byte language;
     char *description;
 };
 
 struct obj_flag_data
 {
-    byte type_flag;
+    rpi_byte type_flag;
     bitflag wear_flags;
     int extra_flags;
     int extra_flags2;

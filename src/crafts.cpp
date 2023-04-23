@@ -724,8 +724,8 @@ void
 			send_to_char (buf, ch);
 		}
 
-		if (phase->tool > 0)
-			missing_item_msg (ch, phase->tool, "Tool required:  ");
+		if (phase->tool != nullptr)
+        missing_item_msg (ch, phase->tool, "Tool required:  ");
 
 		for (i = 0; i < MAX_ITEMS_PER_SUBCRAFT; i++)
 		{
